@@ -1,0 +1,179 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/productLyt"
+    android:layout_width="@dimen/home_product_item_width"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin10"
+    android:layout_marginTop="@dimen/margin5"
+    android:layout_marginBottom="@dimen/margin10"
+    android:background="@color/white">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/productLL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_product_item_height"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding5">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/productIconIV"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/similar_card_height"
+                android:padding="@dimen/padding5"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/refurbishIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/refurb"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/favouriteIconCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:padding="@dimen/padding5"
+                android:src="@drawable/fav_selector" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <include layout="@layout/view_out_of_stock" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding10"
+            android:paddingRight="@dimen/padding10"
+            android:paddingBottom="@dimen/padding5">
+
+            <TextView
+                android:id="@+id/productNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="Panasonic Smart Power Alpha 9000mAh Power Bank"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_12" />
+
+            <TextView
+                android:id="@+id/productSkuDescTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Panasonic Smart Power Alpha 9000mAh Power Bank"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_11"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtMrp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_10"
+                    android:layout_alignParentLeft="true"
+                    android:text="MRP : "/>
+            <TextView
+                android:id="@+id/priceMRP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/MRP_Price"
+                android:textColor="@color/colorPrimary"
+                android:layout_toRightOf="@+id/txtMrp"
+                android:textSize="@dimen/text_10" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/priceTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rs"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_10" />
+            <TextView
+                android:id="@+id/marginTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/red"
+                android:padding="2dp"
+                android:layout_alignParentRight="true"
+                android:text="@string/margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_10"
+                android:textStyle="bold"
+                android:visibility="visible" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/moqTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/MOQ"
+                android:textColor="@color/black_70_opacity"
+                android:textSize="@dimen/text_10"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/inquiryTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin2"
+                android:background="@drawable/tag_background_gray"
+                android:paddingLeft="@dimen/padding5"
+                android:paddingTop="@dimen/padding2"
+                android:paddingRight="@dimen/padding5"
+                android:paddingBottom="@dimen/padding2"
+                android:text="@string/inquiry"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_12"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnAddToCartReOrder"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_30"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/red_border_rectangle"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin10"
+        android:layout_marginRight="@dimen/margin10"
+        android:layout_marginTop="@dimen/margin5"
+        android:layout_marginBottom="@dimen/margin10"
+        android:layout_weight="1"
+        android:padding="@dimen/padding5"
+        android:text="@string/add_to_cart"
+        android:visibility="visible" />
+</LinearLayout>
+</android.support.v7.widget.CardView>

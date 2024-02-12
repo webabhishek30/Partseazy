@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/margin20LeftRight"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin30"
+    android:layout_marginTop="@dimen/margin20"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/callRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_checkout"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/callTV"
+            android:src="@drawable/icon_phone"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/callTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="@dimen/padding15"
+            android:text="@string/call_owner"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_17" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/chatRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_checkout"
+        android:layout_marginTop="@dimen/margin10"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/chatTV"
+            android:src="@drawable/ic_chat_white_24dp"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/chatTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="@dimen/padding15"
+            android:text="@string/chat_owner"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_17" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/sendPortforlioTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin10"
+        android:background="@color/green_checkout"
+        android:gravity="center"
+        android:padding="@dimen/padding15"
+        android:text="Send Portfolio"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_17"
+        android:visibility="visible" />
+
+
+</LinearLayout>

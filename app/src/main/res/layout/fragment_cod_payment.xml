@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/styleParentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/otpLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?actionBarSize"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_Large">
+
+        <TextView
+            android:id="@+id/otpTextTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_medium"
+            android:textSize="@dimen/text_14" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="One Time Password (OTP)"
+            android:theme="@style/styleTextInputLayout">
+
+            <EditText
+                android:id="@+id/otpET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:focusableInTouchMode="true"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/otp_resendTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/resend_otp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/otpSubmitBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/cart_continue_button_selector"
+            android:text="@string/confirm_otp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16" />
+
+
+    </LinearLayout>
+
+    <include layout="@layout/progress_loader" />
+</FrameLayout>

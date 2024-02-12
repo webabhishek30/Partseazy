@@ -1,0 +1,40 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/collapsing_toolbar"></include>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <include layout="@layout/scollable_submit_view" />
+
+    <RelativeLayout
+        android:id="@+id/continueRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/dull_white"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/continueBT"
+            style="@style/styleSubmitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin10"
+            android:text="@string/continue_caps"
+            android:textAllCaps="true" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

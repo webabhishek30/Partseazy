@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/card_margin"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/myhomeRL"
+        style="@style/margin10LeftRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding10">
+
+
+        <TextView
+            android:id="@+id/myHomeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mall"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_17"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/myHomeIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:tint="@color/nav_icon_color"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_right" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/categoryViewLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/margin10"
+        style="@style/margin32LeftRight"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/categoryNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Electronic"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_17" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+
+</LinearLayout>

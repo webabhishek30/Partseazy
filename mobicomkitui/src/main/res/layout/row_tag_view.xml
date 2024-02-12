@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin10"
+    android:layout_marginBottom="@dimen/margin10"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:background="@drawable/white_oval_tag"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding10">
+
+    <TextView
+        android:id="@+id/tagNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:id="@android:id/closeButton"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginLeft="4dp"
+        android:visibility="gone" />
+</LinearLayout>

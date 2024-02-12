@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/progressbarRL"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin20"
+        android:layout_marginRight="@dimen/margin20"
+        android:layout_marginTop="@dimen/margin20"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/address_payTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"
+            android:text="@string/address_cap"
+            android:gravity="left"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/payment_payTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"
+            android:text="@string/payment"
+            android:gravity="center"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/complete_payTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"
+            android:text="@string/complete_cap"
+            android:gravity="center|right"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="@dimen/margin10"
+        android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/address_payIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/check_green_circle"
+                />
+            <View
+                android:id="@+id/payment_payView"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/green_checkout"
+                android:layout_weight=".4"/>
+            <ImageView
+                android:id="@+id/payment_payIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/check_green_circle"/>
+
+            <View
+                android:id="@+id/complete_payView"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/view"
+                android:layout_weight=".4"/>
+            <ImageView
+                android:id="@+id/complete_payIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/circular_border"/>
+
+    </LinearLayout>
+
+</LinearLayout>

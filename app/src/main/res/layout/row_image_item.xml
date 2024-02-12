@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/boxRL"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/width80"
+    android:layout_margin="@dimen/margin5"
+    android:background="@color/dull_white"
+    android:padding="@dimen/padding5">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/iconIV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal" />
+
+    <ImageView
+        android:id="@+id/crossIV"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/padding2"
+        android:src="@drawable/ic_cross" />
+
+
+</RelativeLayout>

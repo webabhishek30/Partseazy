@@ -1,0 +1,34 @@
+<RelativeLayout
+    android:id="@+id/picIconRL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:layout_margin="@dimen/margin5"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/uploadLL"
+        android:layout_width="@dimen/width80"
+        android:layout_height="@dimen/width70"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/green_dotted_border"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin10"
+            android:src="@drawable/ic_upload_pic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:text="@string/upload_photo"
+            android:textColor="@color/green_checkout" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/margin10LeftRight"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin5"
+    android:layout_marginTop="@dimen/margin5"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding10"
+            android:paddingRight="@dimen/padding10"
+            android:paddingTop="@dimen/padding10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/descTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="Black color"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_16" />
+
+                <TextView
+                    android:id="@+id/moqTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:gravity="right"
+                    android:text="@string/MOQ"
+                    android:textColor="@color/black_70_opacity"
+                    android:textSize="@dimen/text_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/mrpTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.25"
+                    android:text="Rs 12000"
+                    android:textColor="@color/textGray"
+                    android:textSize="@dimen/text_15" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.45"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/priceTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs 12000"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_16" />
+
+                    <TextView
+                        android:id="@+id/skuDiscountTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin5"
+                        android:background="@drawable/rectangle_green_border"
+                        android:paddingBottom="@dimen/padding2"
+                        android:paddingLeft="@dimen/padding5"
+                        android:paddingRight="@dimen/padding5"
+                        android:paddingTop="@dimen/padding2"
+                        android:text="100% OFF"
+                        android:textColor="@color/green_checkout"
+                        android:textSize="@dimen/text_12" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/editLL"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_weight=".3"
+                    android:visibility="gone">
+
+                    <include layout="@layout/item_edit_qty" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/stockLL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/stockTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stock_qty"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/soldTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin2"
+                        android:text="@string/sold_qty"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dull_white"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/padding8"
+                android:paddingTop="@dimen/padding8">
+
+                <TextView
+                    android:id="@+id/claimTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="22% Claimed"
+                    android:textColor="@color/black" />
+
+                <ProgressBar
+                    android:id="@+id/simpleProgressBar"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="120dp"
+                    android:layout_height="7dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin5"
+                    android:layout_toRightOf="@+id/claimTV"
+                    android:progress="35"
+                    android:progressDrawable="@drawable/rounded_corners_progress_bar" />
+                <TextView
+                    android:id="@+id/editSKUTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/edit"
+                    android:paddingRight="@dimen/padding10"
+                    android:paddingLeft="@dimen/padding10"
+                    android:textColor="@color/colorPrimary"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#99000000"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/errTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/out_of_stock"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_18"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </FrameLayout>
+</android.support.v7.widget.CardView>

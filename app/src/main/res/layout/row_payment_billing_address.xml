@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:id="@+id/billingAddressHeadingTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_15"
+        android:text="@string/your_billing_address"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin10"
+        android:layout_marginRight="@dimen/margin10"
+        android:layout_marginLeft="@dimen/margin10"
+        android:textAllCaps="true" />
+
+    <RelativeLayout
+        android:id="@+id/select_addressRL"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin10"
+        android:background="@drawable/rectangle_grey_border_white_solid"
+        android:layout_below="@id/billingAddressHeadingTV"
+        android:elevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin10">
+
+            <TextView
+                android:id="@+id/nameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_15"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+
+
+            <TextView
+                android:id="@+id/addressTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_15"
+                android:layout_marginTop="@dimen/margin5"
+                android:textColor="@color/text_dark"
+                />
+            <TextView
+                android:id="@+id/landmarkTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_15"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/margin5"
+                android:textColor="@color/text_dark"/>
+            <TextView
+                android:id="@+id/pincodeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_15"
+                android:layout_marginTop="@dimen/margin5"
+                android:visibility="gone"
+                android:textColor="@color/text_dark"/>
+            <TextView
+                android:id="@+id/mobileTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_15"
+                android:layout_marginTop="@dimen/margin5"
+                android:textColor="@color/text_dark"/>
+            <TextView
+                android:id="@+id/gstnTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_15"
+                android:layout_marginTop="@dimen/margin5"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView android:id="@+id/billingAddressTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/change_billing_address"
+                android:textSize="@dimen/text_15"
+                android:textColor="@color/green_checkout"
+                android:layout_marginTop="@dimen/margin5"
+                android:gravity="right"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tagLYT"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin5"
+    android:padding="@dimen/padding10"
+    android:background="@drawable/tag_background_unselected">
+    <TextView
+        android:id="@+id/tagNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:textSize="@dimen/text_12"
+        android:text="Nokia"/>
+</LinearLayout>

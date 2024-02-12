@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding2"
+        android:layout_marginLeft="@dimen/margin40"
+        android:layout_marginRight="@dimen/margin20">
+
+        <TextView
+            android:id="@+id/areaNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lajpat Nagar"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16" />
+        <TextView
+            android:id="@+id/subHeadingTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 2005"
+            android:textColor="@color/colorPrimarySecondaryText"
+            android:textSize="@dimen/text_14"
+            android:layout_marginLeft="@dimen/margin10"
+            android:visibility="visible"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

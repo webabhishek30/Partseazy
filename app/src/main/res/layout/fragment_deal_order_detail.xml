@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBG"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/contentLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/dealBTLL"
+            android:orientation="vertical">
+
+
+            <include layout="@layout/non_scrollable_view" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dealBTLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:visibility="gone">
+            <View
+                android:id="@+id/ftView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view" />
+
+            <TextView
+                android:id="@+id/contactNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact Naveen Kumar"
+                android:paddingTop="@dimen/padding8"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/text_15"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding10"
+                android:paddingRight="@dimen/padding10"
+                android:paddingLeft="@dimen/padding10"
+                android:paddingTop="@dimen/padding5"
+                android:weightSum="2">
+
+
+                <Button
+                    android:id="@+id/chatBT"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin5"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:padding="@dimen/padding10"
+                    android:text="@string/chat"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_14" />
+
+                <Button
+                    android:id="@+id/callBT"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin5"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding10"
+                    android:text="@string/call"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    style="@style/styleCheckoutButton"
+                    android:textSize="@dimen/text_14" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

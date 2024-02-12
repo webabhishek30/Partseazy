@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/padding5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin5"
+        android:padding="@dimen/padding5">
+
+        <RelativeLayout
+            android:id="@+id/categoryItemLL"
+            android:layout_width="@dimen/subcategory_card_width"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.partseazy.android.ui.widget.CircularCheckedImageView
+                android:id="@+id/subCategoryIcon"
+                android:layout_centerHorizontal="true"
+                android:layout_width="@dimen/subcategory_icon_width"
+                android:layout_height="@dimen/subcategory_icon_height" />
+
+            <TextView
+                android:id="@+id/subCatNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subCategoryIcon"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:padding="@dimen/padding2"
+                android:text="Jacket "
+                android:textSize="@dimen/text_12" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_toRightOf="@+id/categoryItemLL"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <com.partseazy.android.ui.widget.RectangularCheckedBox
+                    android:id="@+id/lowCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.partseazy.android.ui.widget.RectangularCheckedBox>
+
+                <com.partseazy.android.ui.widget.RectangularCheckedBox
+                    android:id="@+id/highCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.partseazy.android.ui.widget.RectangularCheckedBox
+                    android:id="@+id/mediumCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.partseazy.android.ui.widget.RectangularCheckedBox
+                    android:id="@+id/luxuryCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/separateLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:background="@color/gray"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding5" />
+
+</LinearLayout>

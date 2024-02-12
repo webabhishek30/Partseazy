@@ -1,0 +1,286 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    style="@style/margin8LeftRight"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin5"
+    android:layout_marginTop="@dimen/margin5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin5"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/dealIconWidth"
+                android:layout_height="@dimen/dealIconHeight">
+
+                <com.android.volley.toolbox.NetworkImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/productIconIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin2"
+                    android:layout_marginRight="@dimen/margin10" />
+
+                <ImageView
+                    android:id="@+id/youtubeIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_youtube"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dealNameTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Samsung Galaxy J2 Pro Cover by Mirox - Transparent"
+                    android:textSize="@dimen/text_18" />
+
+                <LinearLayout
+                    android:id="@+id/singleSkuLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/skuPriceTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin2"
+                        android:text="Rs 24,480"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_16" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/skuMrpTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs 24,480"
+                            android:textColor="@color/textGray"
+                            android:textSize="@dimen/text_13" />
+
+                        <TextView
+                            android:id="@+id/skuDiscountTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin5"
+                            android:background="@drawable/rectangle_green_border"
+                            android:paddingBottom="@dimen/padding2"
+                            android:paddingLeft="@dimen/padding5"
+                            android:paddingRight="@dimen/padding5"
+                            android:paddingTop="@dimen/padding2"
+                            android:text="20% OFF"
+                            android:textColor="@color/green_checkout"
+                            android:textSize="@dimen/text_12" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/dealerNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Sold by: Rajesh Electronics (Lajpat Nagar)"
+                    android:textColor="@color/textGray"
+                    android:textSize="@dimen/text_12" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/skuRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dull_white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dull_white"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin5"
+            android:layout_marginRight="@dimen/margin5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/claimTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:padding="@dimen/padding8"
+                android:text="22% Claimed"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_11" />
+
+            <ProgressBar
+                android:id="@+id/simpleProgressBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="120dp"
+                android:layout_height="7dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin5"
+                android:layout_toRightOf="@+id/claimTV"
+                android:progress="35"
+                android:progressDrawable="@drawable/rounded_corners_progress_bar" />
+
+            <TextView
+                android:id="@+id/dealActiveTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/padding8"
+                android:text="@string/deal_is_over"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_11"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/timerTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/padding8"
+                android:text="Ends in: 01 : 34 :  49 "
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_11" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding5"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding10">
+
+                <TextView
+                    android:id="@+id/dealTxtTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deal_views"
+                    android:textColor="@color/textGray"
+                    android:textSize="@dimen/text_12" />
+
+                <TextView
+                    android:id="@+id/viewTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/margin5"
+                    android:layout_toRightOf="@+id/dealTxtTV"
+                    android:gravity="center"
+                    android:text="30"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_12" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/claimView"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/dull_white" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding10">
+
+                <TextView
+                    android:id="@+id/clickstxtTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deal_clicks"
+                    android:textColor="@color/textGray"
+                    android:textSize="@dimen/text_12" />
+
+                <TextView
+                    android:id="@+id/clickTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/margin5"
+                    android:layout_toRightOf="@+id/clickstxtTV"
+                    android:gravity="center"
+                    android:text="30"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_12" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/promoteDealLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10">
+
+            <Button
+                android:id="@+id/promoteDealBT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingRight="@dimen/padding30"
+                android:paddingLeft="@dimen/padding30"
+                android:paddingTop="@dimen/padding5"
+                android:paddingBottom="@dimen/padding5"
+                android:text="@string/promote_deal"
+                android:textSize="@dimen/text_17"
+                android:textColor="@color/white"
+                android:background="@drawable/cart_continue_button_selector"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

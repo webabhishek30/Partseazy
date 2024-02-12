@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardView"
+    style="@style/margin8LeftRight"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin5"
+    android:layout_marginTop="@dimen/margin5"
+    android:background="@color/white"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding5"
+        android:paddingEnd="@dimen/padding10"
+        android:paddingStart="@dimen/padding10"
+        android:paddingTop="@dimen/padding5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/productNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ellipsize="marquee"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_16" />
+
+                <TextView
+                    android:id="@+id/specificationTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ellipsize="marquee" />
+            </LinearLayout>
+
+
+            <Switch
+                android:id="@+id/productSwitch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:gravity="end"
+                android:theme="@style/SwitchGreen" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/priceLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin8"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/priceTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/price_inr"
+                android:theme="@style/DealTextInputLayoutGrey">
+
+                <EditText
+                    android:id="@+id/priceET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/text_dark"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:textColor="@color/text_dark" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/costTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/cost_inr"
+                android:theme="@style/DealTextInputLayoutGrey">
+
+                <EditText
+                    android:id="@+id/costET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/text_dark"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:textColor="@color/text_dark" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/stockTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/stock"
+                android:theme="@style/DealTextInputLayoutGrey">
+
+                <EditText
+                    android:id="@+id/stockET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/text_dark"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:textColor="@color/text_dark" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/updateBTN"
+            style="@style/styleSubmitButton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin5"
+            android:text="@string/update"
+            android:textAllCaps="true"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

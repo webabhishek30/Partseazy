@@ -1,0 +1,106 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/basicInfocard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin10"
+    android:background="@color/white"
+    android:elevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding5">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding5"
+            android:text="@string/business_info"
+            android:textColor="@color/green_success"
+            android:textSize="@dimen/text_15" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/companyTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/business_name"
+            android:theme="@style/MyTextInputLayoutGrey">
+
+            <EditText
+                android:id="@+id/companyET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/text_dark"
+                android:imeOptions="actionNext"
+                android:inputType="textNoSuggestions"
+                android:singleLine="true"
+                android:textColor="@color/text_dark" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/shopPanTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin5"
+            android:hint="@string/busines_PAN_number"
+            android:theme="@style/MyTextInputLayoutGrey">
+
+            <EditText
+                android:id="@+id/shopPanET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/text_dark"
+                android:imeOptions="actionNext"
+                android:inputType="textCapCharacters"
+                android:maxLength="10"
+                android:textColor="@color/text_dark" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/shopEstdTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin5"
+            android:hint="@string/shop_estd_num"
+            android:theme="@style/MyTextInputLayoutGrey">
+
+            <EditText
+                android:id="@+id/shopEstdET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/text_dark"
+                android:imeOptions="actionNext"
+                android:inputType="textNoSuggestions"
+                android:singleLine="true"
+                android:textColor="@color/text_dark" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin5"
+            android:layout_marginTop="@dimen/margin5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_of_incorporation"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:id="@+id/incorporationDateTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin10"
+                android:background="@drawable/tag_background_selected"
+                android:padding="@dimen/padding10"
+                android:text="@string/click_to_select"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

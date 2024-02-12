@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/categoryItenmLL"
+    android:layout_width="@dimen/subcategory_card_width"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin5"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding10">
+
+    <com.partseazy.android.ui.widget.CircularCheckedImageView
+        android:id="@+id/subCategoryIcon"
+        android:layout_width="@dimen/subcategory_icon_width"
+        android:layout_height="@dimen/subcategory_icon_height"/>
+
+    <TextView
+        android:id="@+id/subCatNameTV"
+        android:layout_width="@dimen/subcategory_icon_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subCategoryIcon"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="@dimen/padding2"
+        android:textSize="@dimen/text_12" />
+</RelativeLayout>

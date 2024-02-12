@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/paymentsTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_15"
+        android:text="Choose Payment Options"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin10"
+        android:layout_marginRight="@dimen/margin10"
+        android:layout_marginLeft="@dimen/margin10"
+        android:textAllCaps="true"
+        />
+
+       <LinearLayout android:id="@+id/pagerLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/paymentsTV"
+            android:orientation="vertical"
+            android:background="@drawable/rectangle_grey_border_white_solid"
+            android:layout_margin="@dimen/margin10"
+            android:elevation="1dp">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/payment_tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextColor="@color/text_dark"
+            app:tabIndicatorColor="@color/green_checkout"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:tabSelectedTextColor="@color/green_checkout"
+            android:overScrollMode="never"
+            app:tabMode="fixed"
+            />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view"
+                android:layout_below="@+id/tabLayout"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager2"
+                android:layout_margin="@dimen/margin5"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                >
+            </android.support.v4.view.ViewPager>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

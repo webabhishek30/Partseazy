@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="red">#FF0000</color>
+    <color name="red_error">#ffff4444</color>
+    <color name="nav_icon_color">#E84C3D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="overlay_color">#99000000</color>
+    <color name="black_70_opacity">#70000000</color>
+    <color name="black_40_opacity">#41000000</color>
+    <color name="white_20_opacity">#20000000</color>
+    <color name="white_70_opacity">#70FFFFFF</color>
+    <color name="black_10_opacity">#10000000</color>
+    <color name="white_90_opacity">#90FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray">#B4B4B4</color>
+    <color name="black">#2C2C2C</color>
+    <color name="cursor_color">#FFFFFF</color>
+    <color name="cursor_focus_field">#989898</color>
+    <color name="edit_txt_color_code">#FFFFFF</color>
+    <color name="edit_hint_txt_color">#70FFFFFF</color>
+    <color name="green_success">#2BC099</color>
+    <color name="green_checkout">#29BB9C</color>
+    <color name="disabled_gray">#9C9C9C</color>
+    <color name="color_gray">#b5b5b5</color>
+
+
+    <color name="colorBtnColor">#cd2f27</color>
+    <color name="colorPrimary">#bf1a1e</color>
+    <color name="colorPrimaryDark">#bf1a1e</color>
+    <color name="light_pink">#f7a1a4</color>
+    <color name="colorAccent">@color/material_deep_teal_500</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorPrimarySecondaryText">#727272</color>
+    <color name="colorPrimaryLightText">#D1C4E9</color>
+
+    <color name="colorDarkBlue">#182f55</color>
+    <color name="colorOrange">#ff9212</color>
+    <color name="accent_material_dark">@color/material_deep_teal_200</color>
+    <color name="accent_material_light">@color/material_deep_teal_500</color>
+    <color name="colorBG">#FFF0F0F0</color>
+    <color name="colorBGRed">#FA5158</color>
+    <color name="dull_white">#FFF0F0F0</color>
+    <color name="textWhite">#f6f6f6</color>
+    <color name="submit_btn_color">#2BC099</color>
+    <color name="submit_btn_focused_color">#07e4aa</color>
+    <color name="submit_btn_pressed_color">#229678</color>
+    <color name="mobile_btn_pressed_color">#fb0a14</color>
+    <color name="mobile_btn_focused_color">#fc555c</color>
+
+    <color name="green">#88D300</color>
+    <color name="cyan">#00F8F8</color>
+    <color name="blue">#0000F8</color>
+    <color name="orange">#F86300</color>
+
+
+
+    <color name="text_dark">#636363</color>
+    <color name="text_normal">#7E7E7E</color>
+    <color name="product_price_color">#F05C61</color>
+    <color name="view">#DCDEE1</color>
+    <color name="gray_background">#F2F3F4</color>
+    <color name="colorCartTabs">#F4F4F4</color>
+    <color name="lightGray">#d3d3d3</color>
+    <color name="yellow_border">#FCBC78</color>
+    <color name="yellow_fill">#FEFBED</color>
+    <color name="transperent">#00000000</color>
+
+    <color name="test">#FF29BB9C</color>
+    <color name="textGray">#979797</color>
+    <color name="green_10_tranparent">#1a00a699</color>
+
+    <color name="deal_title_color">#474747</color>
+
+    <color name="chip_background">#BDBDBD</color>
+    <color name="chip_background_selected">#9E9E9E</color>
+    <color name="orange_checkout">#F28627</color>
+
+    <color name="group_error">#fa4a1e</color>
+
+
+
+    <!-- Screens background color-->
+    <color name="bg_screen1">#f64c73</color>
+    <color name="bg_screen2">#20d2bb</color>
+    <color name="bg_screen3">#3395ff</color>
+    <color name="bg_screen4">#c873f4</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#d1395c</color>
+    <color name="dot_dark_screen2">#14a895</color>
+    <color name="dot_dark_screen3">#2278d4</color>
+    <color name="dot_dark_screen4">#a854d4</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#f98da5</color>
+    <color name="dot_light_screen2">#8cf9eb</color>
+    <color name="dot_light_screen3">#93c6fd</color>
+    <color name="dot_light_screen4">#e4b5fc</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen4</item>
+        <item>@color/dot_light_screen1</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen4</item>
+        <item>@color/dot_dark_screen1</item>
+    </array>
+</resources>

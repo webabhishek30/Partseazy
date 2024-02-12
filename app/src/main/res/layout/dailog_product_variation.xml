@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/dialogattributeRL"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/emptyLL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/contentLL"
+        android:orientation="horizontal"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contentLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/productIconIV"
+                    android:layout_width="@dimen/width100"
+                    android:layout_height="@dimen/height100"
+                    android:layout_weight="0.3"
+                    android:padding="@dimen/padding5"/>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding10"
+                android:paddingRight="@dimen/padding10">
+
+                <TextView
+                    android:id="@+id/productNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/productPriceTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 3200/piece"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_15" />
+
+                <TextView
+                    android:id="@+id/marginTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/margin"
+                    android:textStyle="bold"
+                    android:textColor="@color/green_success"
+                    android:textSize="@dimen/text_12" />
+
+                <LinearLayout
+                    android:id="@+id/moqLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin2"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/moqTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/MOQ_Pack_contains"
+                        android:textSize="@dimen/text_12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sameAttributeLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin2"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/sameAttrNameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_14" />
+
+                    <TextView
+                        android:id="@+id/sameAttrValueTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_14" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray"
+            android:padding="@dimen/padding10" />
+
+        <LinearLayout
+            android:id="@+id/firstAttributeLL"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height45"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tab1NameTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.15"
+                android:gravity="center"
+                android:padding="@dimen/padding5"
+                android:textSize="@dimen/text_15"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/firstAttributeRecylerView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.85"></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/secondAttributeLL"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height45"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/tab2NameTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.15"
+                android:gravity="center"
+                android:padding="@dimen/padding5"
+                android:text="Brand"
+                android:textSize="@dimen/text_15"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/secondAttributeRecylerView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.85"></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/attributeNameLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingTop="@dimen/padding5">
+
+
+            <TextView
+                android:id="@+id/firstAttributeListTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding5"
+                android:gravity="center"
+                android:textSize="@dimen/text_15"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/secondAttributeListTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin16"
+                android:gravity="center"
+                android:paddingLeft="@dimen/margin5"
+                android:text="Size"
+                android:textSize="@dimen/text_15"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/scrollable"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+
+        <LinearLayout
+            android:id="@+id/noAttributeLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding5"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding10"
+                android:text="Please add the Items "
+                android:textSize="@dimen/text_15"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:id="@+id/noAttrItemPriceTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="@dimen/padding5"
+                    android:text="@string/rs"
+                    android:textColor="@color/red"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin20"
+                    android:textSize="@dimen/text_14" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/minusBT"
+                        android:layout_width="@dimen/height30"
+                        android:layout_height="@dimen/height30"
+                        android:background="@drawable/circular_border"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/quantityET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:maxLength="4"
+                        android:maxLines="1"
+                        android:text="0"
+                        android:layout_marginLeft="@dimen/padding2"
+                        android:layout_marginRight="@dimen/padding2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_15" />
+
+                    <TextView
+                        android:id="@+id/plusBT"
+                        android:layout_width="@dimen/height30"
+                        android:layout_height="@dimen/height30"
+                        android:background="@drawable/circular_border"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray"
+            android:padding="@dimen/padding10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding5"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/qtyLL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/qtyTxt" />
+
+                    <TextView
+                        android:id="@+id/totalQuantityTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin2"
+                        android:text="@string/quantityValue"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_15" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/piecesLL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/pieces" />
+
+                    <TextView
+                        android:id="@+id/totalPiecesTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin5"
+                        android:text="@string/quantityValue"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_15" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_price"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/totalPriceHeadingTV"/>
+
+                <TextView
+                    android:id="@+id/totalPriceHeadingTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rs"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_15"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/margin5"
+                    android:layout_marginRight="@dimen/margin2"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/buyBTLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:padding="@dimen/padding5"
+            android:visibility="visible"
+            android:weightSum="2">
+
+
+            <Button
+                android:id="@+id/addToCartBTN"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin5"
+                android:layout_weight="1"
+                android:background="@drawable/red_border_rectangle"
+                android:textColor="@color/colorPrimary"
+                android:padding="@dimen/padding10"
+                android:text="@string/add_to_cart"
+                android:textAllCaps="true"
+                android:textSize="@dimen/text_17" />
+
+            <Button
+                android:id="@+id/buyBTN"
+                style="@style/styleCheckoutButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin5"
+                android:layout_weight="1"
+                android:text="@string/buy_now"
+                android:textAllCaps="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

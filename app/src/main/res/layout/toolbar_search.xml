@@ -1,0 +1,175 @@
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:compat="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    app:layout_collapseMode="pin"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    compat:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin5"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/btn_mode_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:paddingTop="@dimen/padding10"
+            android:paddingRight="@dimen/padding10"
+            android:paddingBottom="@dimen/padding10"
+            android:layout_alignParentLeft="true"
+            android:tint="@color/white"
+            android:src="@drawable/menu_view" />
+
+
+        <ImageView
+            android:id="@+id/btn_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/btn_mode_switch"
+            android:adjustViewBounds="true"
+            android:paddingRight="@dimen/padding5"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="@dimen/margin5"
+            android:src="@mipmap/parts_eazy_white_logo" />
+
+
+        <LinearLayout
+            android:id="@+id/menuIconLL"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:layout_alignParentRight="true"
+            android:visibility="visible">
+
+         <!--   <include layout="@layout/cart_update_icon" />
+
+-->
+            <ImageView
+                android:id="@+id/favIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:padding="@dimen/padding5"
+                android:tint="@color/white"
+                android:src="@drawable/ic_heart" />
+
+
+            <ImageView
+                android:id="@+id/menuOptionsIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:tint="@color/white"
+                android:padding="@dimen/padding5"
+                android:src="@drawable/qr_code_scanner_icon"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>
+
+<!--    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin5"
+        android:background="@drawable/tag_background_unselected">
+
+        <ImageView
+            android:id="@+id/btn_mode_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:paddingTop="@dimen/padding10"
+            android:paddingRight="@dimen/padding10"
+            android:paddingBottom="@dimen/padding10"
+            android:src="@drawable/menu_view" />
+
+
+        <ImageView
+            android:id="@+id/btn_home"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/padding10"
+            android:paddingRight="@dimen/padding5"
+            android:paddingBottom="@dimen/padding10"
+            android:src="@drawable/ic_launcher" />
+
+        <EditText
+            android:id="@+id/searchET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.3"
+            android:background="@android:color/transparent"
+            android:hint="@string/search_in_mall"
+            android:visibility="gone"
+            android:layout_marginLeft="-8dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/margin15" />
+
+        <LinearLayout
+            android:id="@+id/searchIconLL"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:gravity="end"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/crossIV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:padding="@dimen/padding5"
+                android:src="@drawable/ic_cross" />
+
+            <TextView
+                android:id="@+id/goTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin5"
+                android:background="@drawable/tag_background_selected"
+                android:gravity="center"
+                android:padding="@dimen/padding5"
+                android:text="GO" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menuIconLL"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:visibility="visible">
+
+            <include layout="@layout/cart_update_icon" />
+
+
+            <ImageView
+                android:id="@+id/favIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:padding="@dimen/padding5"
+                android:src="@drawable/ic_heart" />
+
+            <ImageView
+                android:id="@+id/menuOptionsIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:rotation="90"
+                android:src="@drawable/ic_options"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </LinearLayout>-->

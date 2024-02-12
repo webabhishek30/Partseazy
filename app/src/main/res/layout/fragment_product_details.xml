@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorBG"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/productContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/non_scrollable_view" />
+
+        <LinearLayout
+            android:id="@+id/gotoBagLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/gotToBagBT"
+                style="@style/styleCheckoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding10"
+                android:text="@string/select_n_buy"
+                android:textAllCaps="true"
+                android:textSize="@dimen/text_17" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/notActiveLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/notActiveTV"
+                style="@style/styleCheckoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding10"
+                android:text="@string/product_not_active"
+                android:textAllCaps="true"
+                android:textSize="@dimen/text_17"
+                android:background="@color/gray"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/inquireLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/inquireBTN"
+                style="@style/styleCheckoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding10"
+                android:text="@string/enquire_product"
+                android:textAllCaps="true"
+                android:textSize="@dimen/text_17" />
+
+
+        </LinearLayout>
+
+
+        <include layout="@layout/progress_loader" />
+    </RelativeLayout>
+
+    <include layout="@layout/no_data_layout" />
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent" />
+
+</FrameLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin10"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/callRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_grey_border_grey_solid"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/orderTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin5"
+            android:text="Order on Call"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_15" />
+
+        <LinearLayout
+            android:id="@+id/numberLyt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            style="@style/padding16LeftRight"
+            android:paddingBottom="@dimen/padding5">
+
+            <ImageView
+                android:id="@+id/callIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:rotation="270"
+                android:src="@android:drawable/sym_action_call" />
+
+
+            <TextView
+                android:id="@+id/mobileNumberTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="+91-9999999999"
+                android:textColor="@color/green_checkout"
+                android:textSize="@dimen/text_15" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

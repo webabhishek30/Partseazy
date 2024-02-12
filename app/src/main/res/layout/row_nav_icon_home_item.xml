@@ -1,0 +1,174 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/dealRL"
+        style="@style/margin10LeftRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding10">
+
+
+        <TextView
+            android:id="@+id/dealTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:text="@string/deals"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_17" />
+
+        <ImageView
+            android:id="@+id/dealIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/nav_deal_icon"
+            android:tint="@color/nav_icon_color" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/myShopRL"
+        style="@style/margin10LeftRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding10"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/myShopTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:text="@string/boaster"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_17" />
+
+        <ImageView
+            android:id="@+id/myShopIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/nav_booster_icon"
+            android:tint="@color/nav_icon_color" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/reportCardRL"
+        style="@style/margin10LeftRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding10"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/reportCardTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:text="@string/report_card"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_17" />
+
+        <ImageView
+            android:id="@+id/reportCardIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/nav_report_card"
+            android:tint="@color/nav_icon_color" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/customerManagementRL"
+        style="@style/margin10LeftRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding10"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/customerManagementTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:text="@string/customer_management"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_17" />
+
+        <ImageView
+            android:id="@+id/customerManagementIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/customer_mgmt"
+            android:tint="@color/nav_icon_color" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/consumerFinanceRL"
+        style="@style/margin10LeftRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding10"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/consumerFinanceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:text="@string/consumer_finance"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_17" />
+
+        <ImageView
+            android:id="@+id/consumerFinanceIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/paper_money"
+            android:tint="@color/nav_icon_color" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:visibility="gone" />
+
+
+</LinearLayout>
+

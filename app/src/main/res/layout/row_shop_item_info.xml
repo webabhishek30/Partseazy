@@ -1,0 +1,53 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    style="@style/margin10LeftRight"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding10">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/shopNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="OFFER 3 in 1 COMBO Micro USB OTG Cable Flax Aux Cable,Headset,Headphone,Earphone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_18" />
+
+            <TextView
+                android:id="@+id/shopAddressTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin2"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="MWT_ISD_123"
+                android:textSize="@dimen/text_16" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/shopFloorTV"
+            android:layout_marginTop="@dimen/margin2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_16"/>
+
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

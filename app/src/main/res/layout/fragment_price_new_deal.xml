@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dull_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/toolbarLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <include layout="@layout/toolbar" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/continueBT"
+        style="@style/styleSubmitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:text="@string/save_continue"
+        android:textAllCaps="true" />
+
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/continueBT"
+        android:layout_below="@id/toolbarLL">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical">
+
+            <include layout="@layout/row_create_deal_progressbar" />
+
+            <LinearLayout
+                android:id="@+id/multiSkuLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10"
+                android:background="@color/dull_white"
+                android:orientation="vertical" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10">
+
+
+                <TextView
+                    android:id="@+id/addMoreSkTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/new_sku"
+                    android:textAllCaps="true"
+                    android:paddingRight="@dimen/padding10"
+                    android:paddingLeft="@dimen/padding10"
+                    android:layout_marginRight="@dimen/margin20"
+                    android:textColor="@color/green_checkout"
+                    android:textSize="@dimen/text_17" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                style="@style/margin8LeftRight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin5"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/padding10"
+                android:paddingLeft="@dimen/padding10"
+                android:paddingRight="@dimen/padding10"
+                android:paddingTop="@dimen/padding10"
+                android:visibility="gone">
+
+
+                <RadioGroup
+                    android:id="@+id/productSkuRG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <RadioButton
+                        android:id="@+id/singleSkuRB"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/single_sku"
+                        android:textSize="@dimen/text_14" />
+
+                    <RadioButton
+                        android:id="@+id/multipleSkuRB"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/multiple_sku"
+                        android:textSize="@dimen/text_14" />
+                </RadioGroup>
+
+
+                <include layout="@layout/layout_single_sku_deal" />
+
+                <LinearLayout
+                    android:id="@+id/paymentLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/payment_option"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_16" />
+
+
+                    <CheckBox
+                        android:id="@+id/prepaidCB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prepaid_optiom"
+                        android:textSize="@dimen/text_14" />
+
+                    <CheckBox
+                        android:id="@+id/codCB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cash_on_delivery"
+                        android:textSize="@dimen/text_14" />
+
+                    <CheckBox
+                        android:id="@+id/payLaterCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_only_pay_later"
+                        android:textSize="@dimen/text_14" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/partseazy_assurance"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_15" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/know_more"
+                        android:textColor="@color/green_checkout"
+                        android:textSize="@dimen/text_15" />
+
+                </RelativeLayout>
+
+
+                <CheckBox
+                    android:id="@+id/escrowCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/partseazy_assurance_des"
+                    android:textSize="@dimen/text_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin35"
+                    android:text="@string/terms_assurance"
+                    android:textSize="@dimen/text_12" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

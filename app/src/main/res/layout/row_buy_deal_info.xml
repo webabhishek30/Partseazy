@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/selectOptionLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dull_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/margin8LeftRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin10"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/privateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/switch_to_private_deal"
+            android:textColor="@color/deal_title_color"
+            android:textSize="@dimen/text_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/privateTV"
+            android:text="@string/private_deals_msg"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/text_12" />
+
+
+        <Switch
+            android:id="@+id/dealSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin10" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/categoryRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin5"
+        android:layout_marginTop="@dimen/margin5" />
+
+    <TextView
+        android:id="@+id/showingResultTV"
+        style="@style/margin8LeftRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin5"
+        android:layout_marginTop="@dimen/margin10"
+        android:text="@string/showing_results"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/text_13"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/noDealRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin50"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/noDealIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin20"
+            android:src="@drawable/ic_no_deal" />
+
+        <TextView
+            android:id="@+id/noDealTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/noDealIV"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin5"
+            android:gravity="center_horizontal"
+            android:text="No Deal Found"
+            android:textSize="@dimen/text_18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/noDealCategoryTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/noDealTV"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin5"
+            android:gravity="center_horizontal"
+            android:text="No Deal "
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

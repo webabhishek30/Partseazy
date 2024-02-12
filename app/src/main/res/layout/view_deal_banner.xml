@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/productToolbarHeight"
+    android:background="@color/dull_white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.partseazy.android.ui.widget.AutoScrollPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/productBannerHeight" />
+
+
+    </FrameLayout>
+
+    <com.partseazy.android.ui.widget.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/circularIndicatorHeight"
+        android:layout_gravity="bottom|center_horizontal"
+        app:ci_drawable="@drawable/black_radius"
+        app:ci_drawable_unselected="@drawable/gray_radius"
+        app:ci_height="@dimen/height5"
+        app:ci_width="@dimen/width5" />
+
+</LinearLayout>

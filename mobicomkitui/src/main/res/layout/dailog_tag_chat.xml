@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/otpLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/padding10">
+
+    <TextView
+        android:id="@+id/otpTextTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding10"
+        android:text="Do you want to send this  message ?"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin10">
+
+        <TextView
+            android:id="@+id/yesTV"
+            android:text="Send Yes Please"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:background="@android:color/holo_blue_light"/>
+        <TextView
+            android:id="@+id/noTV"
+            android:text="Send No Please"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:background="@android:color/holo_red_light"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
+

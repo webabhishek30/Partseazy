@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/progress_paymentLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+        <include layout="@layout/row_shipping_progressbar" />
+        <include layout="@layout/row_booking_deal_progressbar"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/add_addressBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progress_paymentLL"
+        android:layout_margin="@dimen/margin10"
+        android:background="@drawable/rectangle_grey_border_white_solid"
+        android:elevation="2dp"
+        android:gravity="left|center"
+        android:padding="@dimen/padding15"
+        android:paddingLeft="@dimen/padding15"
+        android:text="+  Add a new address"
+        android:textAllCaps="false"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/text_18" />
+
+    <TextView
+        android:id="@+id/saved_addressTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_addressBtn"
+        android:layout_margin="@dimen/margin10"
+        android:text="Select Shipping Address"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_18"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/address_listRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/continueRL"
+        android:layout_below="@+id/saved_addressTV"
+        android:background="@color/gray_background">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/scrollable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_background"
+            android:overScrollMode="never" />
+
+        <include layout="@layout/progress_loader" />
+
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/continueRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/ftView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view" />
+
+        <Button
+            android:id="@+id/checkout_cartBT"
+            style="@style/styleCheckoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:text="@string/continue_btn" />
+
+    </FrameLayout>
+
+</RelativeLayout>

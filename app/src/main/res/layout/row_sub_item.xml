@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/view" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/sub_item_cartIV"
+                android:layout_width="@dimen/sub_item_image"
+                android:layout_height="@dimen/sub_item_image"
+                android:layout_marginTop="@dimen/margin10"
+                android:padding="2dp"
+                android:scaleType="fitCenter" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/item_attributeTV"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/margin5"
+                    android:layout_weight=".6"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_13" />
+
+                <TextView
+                    android:id="@+id/item_priceTV"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:gravity="right"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_13" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/edit_item_qtyLL"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:gravity="center|right"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/decrease_item_qtyTV"
+                    android:layout_width="@dimen/height30"
+                    android:layout_height="@dimen/height30"
+                    android:background="@drawable/circular_border"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/item_qtyTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/height30"
+                    android:layout_margin="@dimen/margin5"
+                    android:gravity="center"
+                    android:maxLength="4"
+                    android:maxLines="1"
+                    android:text="3000"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_15" />
+
+                <TextView
+                    android:id="@+id/increase_item_qtyTV"
+                    android:layout_width="@dimen/height30"
+                    android:layout_height="@dimen/height30"
+                    android:background="@drawable/circular_border"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/errorcartTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/product_image_fl"
+            android:layout_margin="@dimen/margin10"
+            android:layout_below="@+id/linearLayout4"
+            android:layout_marginBottom="@dimen/margin2"
+            android:layout_marginTop="@dimen/margin2"
+            android:drawableLeft="@drawable/action_error"
+            android:drawablePadding="@dimen/padding2"
+            android:maxLines="2"
+            android:padding="@dimen/padding5"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

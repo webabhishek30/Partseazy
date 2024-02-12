@@ -1,0 +1,234 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+android {
+    compileSdkVersion 28
+    flavorDimensions "default"
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    dexOptions {
+        jumboMode = true
+    }
+
+
+    defaultConfig {
+        applicationId "com.partseazy.android"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 34
+        versionName "1.33"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "URL", "\"http://13.234.33.246:8090/\""
+        buildConfigField "boolean", "IS_PRODUCTION", "false"
+        buildConfigField "String", "APP_TYPE", "\"Retailer\""
+
+    }
+/*
+    signingConfigs {
+        playStoreConfig {
+            storeFile file("cert/partseazy.jks")
+            storePassword "partseazy"
+            keyAlias "partseazy"
+            keyPassword "partseazy"
+
+        }
+        debugConfig {
+            storeFile file("cert/partseazy.jks")
+            storePassword "partseazy"
+            keyAlias "partseazy"
+            keyPassword "partseazy"
+        }
+    }*/
+    signingConfigs {
+        playStoreConfig {
+            storeFile file("cert/b2c2-prod.keystore")
+            storePassword "mobileb2c2"
+            keyAlias "b2c2"
+            keyPassword "mobileb2c2"
+
+        }
+        debugConfig {
+            storeFile file("cert/b2c2-debug.keystore")
+            storePassword "123456789"
+            keyAlias "b2c2"
+            keyPassword "123456789"
+        }
+    }
+
+
+    buildTypes {
+        release {
+            debuggable false
+            signingConfig signingConfigs.playStoreConfig
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+            ndk {
+                abiFilters 'armeabi-v7a','arm64-v8a'
+            }
+
+        }
+        dexOptions {
+            matchingFallbacks = ['release', 'debug']
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.debugConfig
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+        }
+    }
+
+
+    productFlavors {
+
+
+        production {
+            applicationId "com.partseazy.android"
+            versionName "1.33"
+            versionCode 34
+
+            resValue "string", "app_name", "Parts Eazy"
+            buildConfigField "String", "URL", "\"http://13.234.33.246:8090/\""
+            buildConfigField "boolean", "IS_PRODUCTION", "true"
+            buildConfigField "boolean", "FORCE_DEFAULT_LOCATION", "false"
+            buildConfigField "String", "APP_TYPE", "\"Retailer\""
+
+
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "${variant.name}-${variant.versionName}.apk"
+                }
+            }
+
+        }
+
+        dev01 {
+            applicationId "com.partseazy.android"
+            versionName "1.33 dev"
+            versionCode 34
+
+            resValue "string", "app_name", "Parts Eazy"
+            buildConfigField "String", "URL", "\"http://13.234.33.246:8090/\""
+        //    buildConfigField "String", "URL", "\"http://13.234.33.246:8090/\""
+
+            buildConfigField "boolean", "IS_PRODUCTION", "false"
+            buildConfigField "boolean", "FORCE_DEFAULT_LOCATION", "false"
+            buildConfigField "String", "APP_TYPE", "\"Retailer\""
+        }
+
+
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/ECLIPSE_.SF'
+        exclude 'META-INF/ECLIPSE_.RSA'
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':partseazy-networking')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    compile project(path: ':partseazy-eventbus')
+    compile project(path: ':PhotoView')
+    compile project(':sdkui')
+    compile project(':applogic')
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.6@aar') {
+        transitive = true;
+    }
+    compile 'com.android.support:multidex:1.0.3'
+
+    compile 'com.android.support:appcompat-v7:28.0.0'
+    compile 'com.android.support:design:28.0.0'
+    compile 'com.android.support:cardview-v7:28.0.0'
+    compile 'com.android.support:support-v4:28.0.0'
+    compile 'com.google.code.gson:gson:2.8.5'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    compile 'com.google.android.gms:play-services-maps:12.0.0'
+    compile 'com.google.android.gms:play-services-location:12.0.0'
+    compile 'com.google.android.gms:play-services-gcm:12.0.0'
+    compile 'com.google.firebase:firebase-messaging:12.0.0'
+    compile 'com.google.android.gms:play-services-analytics:12.0.0'
+
+
+    implementation "com.moengage:moe-android-sdk:9.7.02"
+
+
+    compile 'com.moengage:addon-inbox:2.8.1'
+
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    compile 'me.toptas.fancyshowcase:fancyshowcaseview:1.1.5'
+    compile 'com.getkeepsafe.taptargetview:taptargetview:1.12.0'
+
+    //sms retriver
+    implementation 'com.google.android.gms:play-services-base:12.0.0'
+    //Optional for phone number hint
+    implementation 'com.google.android.gms:play-services-auth:12.0.0'
+
+
+    // wrapper viewpager
+    compile project(':wrappingviewpager')
+
+    //facebook integration for analytics
+    implementation 'com.facebook.android:facebook-core:[5,6)'
+
+    implementation 'com.facebook.android:facebook-marketing:[4,5)'
+
+    //QR code re
+    implementation 'com.budiyev.android:code-scanner:2.1.0'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //localization
+    implementation "com.github.YarikSOffice:lingver:1.2.0"
+
+    //sweet dialog
+    implementation 'com.github.f0ris.sweetalert:library:1.5.1'
+
+    //pdf viewer
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+
+
+}
+
+//apply plugin: 'com.google.gms.google-services'
+
+apply plugin: 'com.google.gms.google-services'
+

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:elevation="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin5"
+        >
+
+        <ImageView
+            android:id="@+id/backBtnIV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin2"
+            android:padding="@dimen/padding10"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <EditText
+            android:id="@+id/searchET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:textColorHint="@color/gray"
+            android:singleLine="true"
+            android:textSize="@dimen/margin15"
+            android:background="@android:color/transparent"
+            android:hint="@string/search_products_brands"
+            android:textColor="@color/black"
+            android:paddingTop="@dimen/padding10"
+            android:paddingBottom="@dimen/padding10"
+            android:imeOptions="actionSearch"
+            android:layout_gravity="center_vertical"/>
+        <LinearLayout
+            android:id="@+id/searchIconLL"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6">
+
+            <ImageView
+                android:id="@+id/crossIV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:padding="@dimen/padding5"
+                android:src="@drawable/ic_cross"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/goTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="GO"
+                android:gravity="center"
+                android:layout_margin="@dimen/margin5"
+                android:padding="@dimen/padding5"
+                android:textColor="@color/white"
+                android:background="@drawable/tag_background_selected" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+

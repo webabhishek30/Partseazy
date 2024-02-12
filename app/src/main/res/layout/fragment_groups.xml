@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollNSV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/parentLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding10"
+            android:paddingEnd="@dimen/padding10"
+            android:paddingStart="@dimen/padding10"
+            android:paddingTop="@dimen/padding20">
+
+            <TextView
+                android:id="@+id/groupErrorTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin5"
+                android:text="Please select a group for blasting a message"
+                android:textColor="@color/group_error"
+                android:textSize="@dimen/text_12"
+                android:visibility="gone" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/noGroupLL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/no_group"
+            android:tint="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin20"
+            android:layout_marginStart="@dimen/margin20"
+            android:layout_marginTop="@dimen/margin10"
+            android:gravity="center"
+            android:text="No groups found!"
+            android:textSize="@dimen/text_16" />
+
+        <Button
+            android:id="@+id/registerCustomerBT"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin20"
+            android:background="@drawable/green_button_selector_rounded"
+            android:text="@string/register_customer"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16" />
+    </LinearLayout>
+</LinearLayout>

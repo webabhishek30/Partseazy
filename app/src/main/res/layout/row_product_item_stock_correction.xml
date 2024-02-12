@@ -1,0 +1,105 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/card_margin"
+    android:layout_marginLeft="@dimen/margin10"
+    android:layout_marginRight="@dimen/margin10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/headingRL"
+            android:padding="@dimen/padding10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/stock_correction"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_17" />
+
+            <ImageView
+                android:id="@+id/expandIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="@dimen/padding5"
+                android:paddingRight="@dimen/padding5"
+                android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+            <ImageView
+                android:id="@+id/compressIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="@dimen/padding5"
+                android:paddingRight="@dimen/padding5"
+                android:rotation="90"
+                android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/stockCorrectionLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin10"
+            android:paddingLeft="@dimen/padding10"
+            android:paddingRight="@dimen/padding10"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_weight="1.8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/minQuantityTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="@string/valid_on_min" />
+
+                <TextView
+                    android:id="@+id/correctionAcceptedTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="@string/correction_accepted_here" />
+
+                <TextView
+                    android:id="@+id/timelineTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="@string/maximum_correction_days" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/informationIV"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/info_red_icon" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

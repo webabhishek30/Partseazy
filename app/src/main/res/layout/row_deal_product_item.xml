@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView android:id="@+id/cart"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin10"
+    android:layout_below="@+id/order_reviewTV"
+
+    android:layout_marginLeft="@dimen/margin10"
+    android:layout_marginRight="@dimen/margin10"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:id="@+id/cartRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/cartleftRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="@dimen/margin10">
+
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/productIV"
+                    android:layout_width="@dimen/cart_item_image"
+                    android:layout_height="@dimen/cart_item_image"
+                    android:padding="2dp"
+                    android:scaleType="fitCenter" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin5"
+                    android:layout_toRightOf="@+id/productIV"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/dealNameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text="Panasonic Smart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_15" />
+
+
+                    <TextView
+                        android:id="@+id/sellerTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="Seller: Ajay Sales Co. LTD"
+                        android:textColor="@color/text_dark"
+                        android:textSize="@dimen/text_14" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/skuRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/product_image_fl">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <View
+                android:id="@+id/viewCart"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/sub_itemRV"
+                android:background="@color/view" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/shippingRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/shipping_charges"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/shippingTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:maxLines="1"
+                        android:text="@string/rs"
+                        android:textColor="@color/text_normal" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/total"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_16" />
+
+                    <TextView
+                        android:id="@+id/totalTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:maxLines="1"
+                        android:text="@string/rs"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_16" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:orientation="horizontal" android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/white"-->
+    <!--android:padding="@dimen/padding10">-->
+
+    <!--<com.android.volley.toolbox.NetworkImageView-->
+        <!--android:id="@+id/productIconIV"-->
+        <!--android:layout_width="@dimen/width100"-->
+        <!--android:layout_height="@dimen/height100"-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"/>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="0.6"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/dealNameTV"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Samsung Galaxy J2 Pro Cover by Mirox - Transparent"-->
+            <!--android:textSize="@dimen/text_14"-->
+            <!--android:textColor="@color/black"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/dealPriceTV"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="@dimen/margin8"-->
+            <!--android:text="Rs 24,480"-->
+            <!--android:textColor="@color/colorPrimary"-->
+            <!--android:textSize="@dimen/text_15" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Rs 24,480"-->
+                <!--android:textColor="@color/textGray"-->
+                <!--android:textSize="@dimen/text_11" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/discountTV"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="@dimen/margin5"-->
+                <!--android:background="@drawable/rectangle_green_border"-->
+                <!--android:padding="@dimen/padding5"-->
+                <!--android:text="20% OFF"-->
+                <!--android:textColor="@color/green_checkout"-->
+                <!--android:textSize="@dimen/text_11" />-->
+
+        <!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>-->
+
+
+<!--</LinearLayout>-->

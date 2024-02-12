@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item android:state_pressed="true" android:drawable="@drawable/abc_list_selector_background_transition_holo_dark"/>-->
+    <!--<item android:state_hovered="true" android:drawable="@drawable/abc_list_selector_holo_light"/>-->
+    <!--<item  android:drawable="@drawable/abc_list_selector_holo_light"/>-->
+    <item android:drawable="@color/colorPrimaryDark" android:state_pressed="true" />
+    <item android:drawable="@color/colorPrimary" android:state_pressed="false" />
+    <item android:drawable="@color/colorPrimary" />
+</selector>

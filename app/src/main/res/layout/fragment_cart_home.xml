@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/styleParentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/cartRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/scrollable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/cart_footer"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin5"
+            android:layout_marginRight="@dimen/margin5"
+            android:background="@color/colorBG"
+            android:clipToPadding="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_collapseMode="pin" />
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cart_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/checkout_cartRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white">
+
+                <View
+                    android:id="@+id/ftView"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view" />
+
+                <RelativeLayout
+                    android:id="@+id/checkoutLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin10"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/total_rs_value_cartTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_15" />
+
+                    <TextView
+                        android:id="@+id/total_rs_cartTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_paybal"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_15" />
+
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/checkout_cartBT"
+                    style="@style/styleCheckoutButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checkoutLL"
+                    android:layout_gravity="center"
+                    android:text="@string/checkout" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+    <include layout="@layout/progress_loader" />
+
+
+    <include layout="@layout/no_data_layout" />
+
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/ll_no_item_in_cart"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/colorBG"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical"-->
+        <!--android:visibility="gone">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:drawablePadding="@dimen/padding_medium"-->
+            <!--android:drawableTop="@drawable/empty_cart"-->
+            <!--android:text="@string/empty_cart" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_continue_shopping"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:layout_margin="@dimen/margin10"-->
+            <!--android:background="@drawable/secondary_button"-->
+            <!--android:text="@string/countinue_shopping"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:visibility="gone" />-->
+    <!--</FrameLayout>-->
+
+
+</RelativeLayout>

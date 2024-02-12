@@ -1,0 +1,105 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin10"
+    android:layout_marginBottom="@dimen/margin20"
+    style="@style/margin10LeftRight">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin5"
+        android:orientation="vertical"
+        android:padding="@dimen/padding10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/supplier_info"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_17" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:orientation="horizontal">
+
+            <com.partseazy.android.ui.widget.CircularImageView
+                android:id="@+id/sellerCircularImage"
+                android:layout_width="@dimen/width50"
+                android:layout_height="@dimen/height50"
+                app:border_color="@color/gray"
+                app:border_width="1dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin15"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/supplierNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Radhe Krishna Mobile Store"
+                    android:textSize="@dimen/text_17" />
+                <TextView
+                    android:id="@+id/supplierCityTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delhi"
+                    android:textSize="@dimen/text_15" />
+
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5">
+
+                    <TextView
+                        android:id="@+id/supplierRatingTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tag_background_selected"
+                        android:paddingBottom="@dimen/padding2"
+                        android:paddingLeft="@dimen/padding5"
+                        android:paddingRight="@dimen/padding5"
+                        android:paddingTop="@dimen/padding2"
+                        android:text="4.5/5"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin10"
+                        android:text="95.4% Positive Feedback "
+                        android:textSize="@dimen/text_14" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/bookDealBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:padding="@dimen/padding10"
+            android:textAllCaps="true"
+            android:text="@string/demo_meeting_hindi"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_20"
+            style="@style/styleCheckoutButton"
+            android:visibility="visible"/>
+
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

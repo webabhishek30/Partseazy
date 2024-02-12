@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/padding5">
+
+    <LinearLayout
+        android:id="@+id/orderLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:orientation="vertical">
+
+            <com.android.volley.toolbox.NetworkImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/productIV"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height100"
+                android:padding="@dimen/padding10"
+                android:scaleType="fitCenter" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.4"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/productNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Samsung Phone 2GB RAM 300HArd Disc 5MP front Camera"
+                android:textSize="@dimen/text_14" />
+
+            <TextView
+                android:id="@+id/sampleItemTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sample_item"
+                android:textSize="@dimen/text_12"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/margin5"
+                android:id="@+id/deliveryTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:padding="@dimen/padding5"
+                android:text="@string/delivered"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:background="@color/colorDarkBlue"
+                android:textSize="@dimen/text_12" />
+
+            <TextView
+                android:layout_marginTop="@dimen/margin5"
+                android:id="@+id/deliveryUnsuccessTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/continue_btn_border"
+                android:padding="@dimen/padding5"
+                android:text="@string/delivery_unsuccessful"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_12"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/separateLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:background="@color/gray"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding5" />
+
+</LinearLayout>

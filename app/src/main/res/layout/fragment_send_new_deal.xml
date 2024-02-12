@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dull_white">
+
+
+    <LinearLayout
+        android:id="@+id/toolbarLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <include layout="@layout/toolbar" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/continueBT"
+        style="@style/styleSubmitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:text="@string/share_deal_info"
+        android:textAllCaps="true" />
+
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/continueBT"
+        android:layout_below="@id/toolbarLL">
+
+        <LinearLayout
+            android:id="@+id/contentLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <include layout="@layout/row_create_deal_progressbar" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/text_20"
+                android:textColor="@color/black"
+                android:text="@string/success" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin5"
+                android:layout_marginTop="@dimen/margin5"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:text="@string/succesfully_deal_created_msg" />
+            <LinearLayout
+                android:id="@+id/skuLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <include layout="@layout/row_buy_deal_item" />
+            </LinearLayout>
+
+            <include layout="@layout/row_broadcast_deal_card"/>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding10"
+                style="@style/margin8LeftRight"
+                android:layout_marginTop="@dimen/margin10"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reach_more_people"
+                    android:textSize="@dimen/text_16"
+                    android:textColor="@color/black"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/shareET"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true" />
+
+                    <Button
+                        android:id="@+id/shareBT"
+                        android:paddingLeft="@dimen/padding10"
+                        android:paddingRight="@dimen/padding10"
+                        android:paddingBottom="@dimen/padding5"
+                        android:paddingTop="@dimen/padding5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin10"
+                        android:textColor="@color/white"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/green_button_selector"
+                        android:textSize="@dimen/text_15"
+                        android:text="@string/share" />>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/share_on_sms"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin15"
+                android:layout_marginBottom="@dimen/margin10"
+                android:textSize="@dimen/text_16" />
+
+            <LinearLayout
+                style="@style/margin8LeftRight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.45"
+                    android:background="@color/textGray" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:text="@string/or"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_14" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.45"
+                    android:background="@color/textGray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding10"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/padding5"
+                    android:paddingTop="@dimen/padding5"
+                    android:text="@string/recommended_group"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginBottom="@dimen/margin10"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:background="@color/textGray" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/groupRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin15"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/padding10">
+
+                <RelativeLayout
+                    android:id="@+id/headingRL"
+                    android:paddingTop="@dimen/padding5"
+                    android:paddingBottom="@dimen/padding5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/selectedTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_contact"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_14" />
+
+                    <ImageView
+                        android:id="@+id/searchIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_search_black_24dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/searchRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/padding2"
+                    android:paddingBottom="@dimen/padding2"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/searchET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/crossIV"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@color/text_dark"
+                        android:hint="@string/search"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:textColor="@color/text_dark" />
+
+                    <ImageView
+                        android:id="@+id/crossIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="@dimen/padding2"
+                        android:src="@drawable/ic_cross" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@color/textGray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/scrollable"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp" />
+
+                    <ProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/contactProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <include layout="@layout/progress_loader" />
+
+
+</RelativeLayout>

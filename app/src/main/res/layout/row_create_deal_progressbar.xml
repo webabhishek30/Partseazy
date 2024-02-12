@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/progressbarRL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin10"
+        android:layout_marginRight="@dimen/margin10"
+        android:layout_marginTop="@dimen/margin20"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/basicTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:gravity="left"
+            android:text="@string/create"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/priceTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:gravity="center"
+            android:text="@string/price"
+            android:layout_marginRight="@dimen/margin15"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/shippingTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:gravity="center"
+            android:text="@string/shipping"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/sendTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:gravity="center|right"
+            android:text="@string/invite_simple"
+            android:layout_marginRight="@dimen/margin10"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin10"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/check_green_circle" />
+
+        <View
+            android:id="@+id/priceLineView"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight=".3"
+            android:background="@color/view" />
+
+        <ImageView
+            android:id="@+id/priceCheckIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/circular_border" />
+
+        <View
+            android:id="@+id/shippingLineView"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight=".3"
+            android:background="@color/view" />
+
+
+        <ImageView
+            android:id="@+id/shippingCheckIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/circular_border" />
+
+        <View
+            android:id="@+id/sendLineView"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight=".3"
+            android:background="@color/view" />
+
+        <ImageView
+            android:id="@+id/sendCheckIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/circular_border" />
+
+    </LinearLayout>
+
+</LinearLayout>

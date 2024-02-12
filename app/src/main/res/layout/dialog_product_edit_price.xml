@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/padding20">
+
+    <TextView
+        android:id="@+id/productNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product Name"
+        android:textSize="@dimen/text_24"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/descriptionTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productNameTV"
+        android:layout_marginTop="@dimen/margin5"
+        android:text="Description"
+        android:textSize="@dimen/text_20" />
+
+    <TextView
+        android:id="@+id/sourceTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descriptionTV"
+        android:layout_marginTop="@dimen/margin5"
+        android:text="@string/source"
+        android:textSize="@dimen/text_20"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/lastUpdatedTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sourceTV"
+        android:layout_marginTop="@dimen/margin5"
+        android:text="Last updated at : "
+        android:textColor="@color/green_success"
+        android:textSize="@dimen/text_20" />
+
+
+    <LinearLayout
+        android:id="@+id/priceLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/margin50"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_weight="1"
+            android:hint="@string/enter_tp"
+            android:textColorHint="@color/black"
+            app:errorTextAppearance="@style/error_appearance">
+
+            <EditText
+                android:id="@+id/tpET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textCursorDrawable="@drawable/black_editbox_cursor" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginStart="@dimen/margin10"
+            android:layout_weight="1"
+            android:hint="@string/enter_sp"
+            android:textColorHint="@color/black"
+            app:errorTextAppearance="@style/error_appearance">
+
+            <EditText
+                android:id="@+id/spET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textCursorDrawable="@drawable/black_editbox_cursor" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mrpTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/priceLL"
+        android:layout_marginTop="@dimen/margin5"
+        android:text="MRP : "
+        android:textSize="@dimen/text_20" />
+
+    <TextView
+        android:id="@+id/marginTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/priceLL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin10"
+        android:text="@string/margin"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@color/red"
+        android:padding="2dp"
+        android:textSize="@dimen/text_20" />
+
+    <TextView
+        android:id="@+id/errorTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/marginTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin5"
+        android:text="@string/margin"
+        android:textStyle="bold"
+        android:textColor="@color/red_error"
+        android:textSize="@dimen/text_14"
+        android:visibility="gone" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/errorTV"
+        android:layout_marginTop="@dimen/margin10"
+        android:hint="@string/enter_source"
+        android:textColorHint="@color/black"
+        app:errorTextAppearance="@style/error_appearance">
+
+        <EditText
+            android:id="@+id/sourceET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textCursorDrawable="@drawable/black_editbox_cursor" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/updateBTN"
+        style="@style/styleCheckoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/margin5"
+        android:text="@string/update_price"
+        android:textAllCaps="true" />
+
+    <TextView
+        android:id="@+id/noteTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/updateBTN"
+        android:layout_marginBottom="@dimen/margin10"
+        android:text="@string/update_all"
+        android:textSize="@dimen/text_16"
+        android:visibility="gone" />
+
+</RelativeLayout>

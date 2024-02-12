@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shipping_cartCD"
+    style="@style/margin10LeftRight"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/headerRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/headingTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10"
+                android:gravity="center_vertical"
+                android:text="@string/billing_address"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_15" />
+
+            <ImageView
+                android:id="@+id/expandShippingIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/margin10"
+                android:src="@drawable/ic_plus" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/contentLL"
+            style="@style/margin10LeftRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin10"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/nameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Naveen"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_15"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/addressTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_15" />
+
+            <TextView
+                android:id="@+id/landmarkTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_15"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/pincodeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_15"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/mobileTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_15" />
+
+            <TextView
+                android:id="@+id/gstnTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_15"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/changeAddressTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
+                android:gravity="right"
+                android:text="@string/change_shipping_address"
+                android:textColor="@color/green_checkout"
+                android:textSize="@dimen/text_15" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+

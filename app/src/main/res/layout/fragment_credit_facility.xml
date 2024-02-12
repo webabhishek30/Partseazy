@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+    <WebView
+        android:id="@+id/epaylaterWebView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:visibility="gone"/>
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/finance_app_banner"
+                android:layout_marginBottom="@dimen/margin10"/>
+
+            <WebView
+                android:id="@+id/descWebView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:layout_margin="@dimen/margin10">
+                <TextView
+                    android:id="@+id/appStatusTextTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_app_status"
+                    android:textSize="@dimen/text_17"
+                    android:padding="@dimen/padding5"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/approvedTagTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tag_background_selected"
+                    android:text="@string/approved"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_12"
+                    android:paddingLeft="@dimen/padding10"
+                    android:paddingRight="@dimen/padding10"
+                    android:paddingTop="@dimen/padding5"
+                    android:paddingBottom="@dimen/padding5"
+                    android:visibility="gone" />
+                <TextView
+                    android:id="@+id/underProcessTagTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tag_background_yellow"
+                    android:text="@string/under_process"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_12"
+                    android:paddingLeft="@dimen/padding10"
+                    android:paddingRight="@dimen/padding10"
+                    android:paddingTop="@dimen/padding5"
+                    android:paddingBottom="@dimen/padding5"
+                    android:visibility="gone" />
+                <TextView
+                    android:id="@+id/rejectedTagTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tag_background_red"
+                    android:text="@string/rejected"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_12"
+                    android:paddingLeft="@dimen/padding10"
+                    android:paddingRight="@dimen/padding10"
+                    android:paddingTop="@dimen/padding5"
+                    android:paddingBottom="@dimen/padding5"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/contactUsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/red_border_rectangle"
+                android:padding="@dimen/padding10"
+                android:text="@string/contact_us"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_15"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/fillAppBTN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginRight="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginBottom="@dimen/margin20"
+                android:background="@color/green_checkout"
+                android:text="@string/fill_application"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/continueBTN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin20"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginRight="@dimen/margin40"
+                android:layout_marginTop="@dimen/margin20"
+                android:background="@color/green_checkout"
+                android:text="@string/continue_shopping"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <include layout="@layout/progress_loader"/>
+</RelativeLayout>

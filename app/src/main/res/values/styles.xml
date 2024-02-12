@@ -1,0 +1,277 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="AppTheme.Base" />
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="B2C2StartupTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Toolbar" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+
+    </style>
+
+    <style name="MyTextInputLayoutRed" parent="B2C2StartupTheme">
+        <item name="colorAccent">@color/red</item>
+        <item name="android:textColorHint">@color/red</item>
+    </style>
+
+
+    <style name="ApplozicTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!--To change the toolbar color change the colorPrimary  -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <!-- To change the status bar  color change the color of colorPrimaryDark -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <!-- colorAccent is used as the default value for colorControlActivated which is used to tint widgets -->
+        <item name="colorAccent">@color/colorPrimary</item>
+
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="AppTheme.MyThemeName" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+
+    <style name="expandedappbar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/transparent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="expandedappbarHome" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="collapsedappbar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="expandedProductAppbar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="collapsedProductAppbar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="styleParentLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">?android:attr/colorBackground</item>
+    </style>
+    <!--  Submit TextView style-->
+    <style name="styleSubmitButton">
+        <item name="android:textSize">@dimen/text_17</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">@dimen/padding10</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:background">@drawable/green_button_selector</item>
+    </style>
+
+
+    <!--  Submit TextView style-->
+    <style name="styleCheckoutButton">
+        <item name="android:textSize">@dimen/text_17</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">@dimen/padding10</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:background">@drawable/cart_continue_button_selector</item>
+    </style>
+
+    <style name="styleSubmitLayout">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="styleSubmitButtonRed">
+        <item name="android:textSize">@dimen/text_17</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">@dimen/padding10</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+    <!--  EditBox style-->
+    <style name="MyTextInputLayout" parent="B2C2StartupTheme">
+        <item name="colorAccent">@color/dull_white</item>
+        <item name="android:textColorHint">@color/edit_hint_txt_color</item>
+    </style>
+
+    <style name="error_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!--  EditBox style-->
+    <style name="MyTextInputLayoutGrey" parent="B2C2StartupTheme">
+        <item name="colorAccent">@color/text_dark</item>
+        <item name="android:textColorHint">@color/text_dark</item>
+        <!--<item name="android:layout_marginLeft">@dimen/margin10</item>-->
+        <!--<item name="android:layout_marginRight">@dimen/margin10</item>-->
+    </style>
+
+    <style name="DealTextInputLayoutGrey" parent="B2C2StartupTheme">
+        <item name="colorAccent">@color/lightGray</item>
+        <item name="android:textColorHint">@color/lightGray</item>
+    </style>
+    <!--<item name="android:layout_marginLeft">@dimen/margin10</item>-->
+    <!--<item name="android:layout_marginRight">@dimen/margin10</item>-->
+    <style name="error_appearance_red" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="margin20LeftRight">
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+    </style>
+
+    <style name="padding10LeftRight">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+
+    <style name="margin8LeftRight">
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+
+    <style name="margin10LeftRight">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <style name="marginLeftRightDetailPage">
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+    </style>
+
+    <style name="margin32LeftRight">
+        <item name="android:layout_marginRight">32dp</item>
+        <item name="android:layout_marginLeft">32dp</item>
+    </style>
+
+    <style name="padding16LeftRight">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+
+    <style name="padding20L_5T_20R_5B">
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="OverFlow" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/action_list</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!--material alertdialog style-->
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/colorPrimaryText</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+
+    <style name="stylePLPTabs">
+        <item name="android:background">@color/colorCartTabs</item>
+    </style>
+
+
+    <style name="styleTextViewLightMedium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+
+    <style name="MyDialogTheme" parent="android:Theme.Dialog">
+        <!-- Fill the screen -->
+        <!-- No backgrounds, titles or window float -->
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+
+        <!-- Just to prove it's working -->
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <!-- Animation for dialog box -->
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <style name="DialogAnimationDownUp">
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+    </style>
+
+    <style name="RightToLeftDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/right_in</item>
+        <item name="android:windowExitAnimation">@anim/right_out</item>
+    </style>
+
+    <style name="MySeekBarTheme" parent="Widget.AppCompat.SeekBar">
+        <item name="colorAccent">#ffff00</item>
+    </style>
+
+    <style name="RatingBar" parent="AppTheme">
+        <item name="colorControlNormal">@color/black_70_opacity</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="styleTextInputLayout" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorPrimaryText</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.WhiteAccent">
+        <item name="colorAccent">@color/dull_white</item>
+    </style>
+
+    <style name="SwitchGreen" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/green_checkout</item>
+    </style>
+
+</resources>

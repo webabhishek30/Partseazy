@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="@color/green_checkout" />
+            <!--<stroke-->
+            <!--android:height="1.0dip"-->
+            <!--android:width="1.0dip"-->
+            <!--android:color="@color/orange_checkout" />-->
+            <!--<solid android:color="#ffffff" />-->
+
+            <corners
+                android:bottomLeftRadius="20dp"
+                android:bottomRightRadius="20dp"
+                android:radius="20dp"
+                android:topLeftRadius="20dp"
+                android:topRightRadius="20dp" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/circularCheckedLL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/checkedFL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <com.partseazy.android.ui.widget.CircularImageView
+            android:id="@+id/checkedCircularImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:border_width="1dp"/>
+
+        <ImageView
+            android:id="@+id/checkedIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="right"
+            android:scaleType="fitXY"
+            android:layout_marginTop="@dimen/margin5"
+            android:background="@drawable/circular_unchecked_icon" />
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

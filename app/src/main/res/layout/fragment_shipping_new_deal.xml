@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dull_white">
+
+    <LinearLayout
+        android:id="@+id/toolbarLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <include layout="@layout/toolbar" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/continueBT"
+        style="@style/styleSubmitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:text="@string/save_continue"
+        android:textAllCaps="true" />
+
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/continueBT"
+        android:layout_below="@id/toolbarLL">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical">
+
+            <include layout="@layout/row_create_deal_progressbar" />
+
+
+            <LinearLayout
+                style="@style/margin8LeftRight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin20"
+                android:layout_marginTop="@dimen/margin5"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/padding20"
+                android:paddingLeft="@dimen/padding10"
+                android:paddingRight="@dimen/padding10"
+                android:paddingTop="@dimen/padding20">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pick_up_address_msg"
+                    android:textSize="@dimen/text_16"
+                    android:textColor="@color/black" />
+                <include layout="@layout/row_pickup_address" />
+
+                <CheckBox
+                    android:id="@+id/pickupCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/allow_buyer_pickup"
+                    android:layout_marginTop="@dimen/margin25"
+                    android:textSize="@dimen/text_16" />
+
+                <CheckBox
+                    android:id="@+id/shipCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ready_to_ship"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:checked="true"
+                    android:textSize="@dimen/text_16" />
+
+
+                <LinearLayout
+                    android:id="@+id/shipChargeLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin30"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shipping_charges"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_16"/>
+
+                    <EditText
+                        android:id="@+id/shippingAmountET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:backgroundTint="@color/text_dark"
+                        android:hint="@string/amount"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxEms="20"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_dark" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin35">
+
+
+                    <RadioGroup
+                        android:id="@+id/shippingRG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/freeShippingRB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/free_shipping"
+                            android:textSize="@dimen/text_14" />
+
+                        <RadioButton
+                            android:id="@+id/paidShippingRB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_14" />
+                    </RadioGroup>
+
+                    <EditText
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/margin35"
+                        android:backgroundTint="@color/text_dark"
+                        android:hint="@string/amount"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxEms="20"
+                        android:textColor="@color/text_dark" />
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin20"
+                    android:text="@string/how_soon_dispach"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_16" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/dispatchRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

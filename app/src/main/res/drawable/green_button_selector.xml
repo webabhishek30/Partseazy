@@ -1,0 +1,14 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/disabled_gray" android:state_enabled="false">
+
+    </item>
+    <item android:drawable="@color/submit_btn_focused_color" android:state_selected="true">
+
+    </item>
+    <item android:drawable="@color/submit_btn_pressed_color" android:state_pressed="true">
+
+    </item>
+    <item android:drawable="@color/submit_btn_color">
+
+    </item>
+</selector>

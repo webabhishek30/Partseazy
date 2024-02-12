@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/padding5">
+
+    <LinearLayout
+        style="@style/margin10LeftRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/headingTV"
+            style="@style/margin10LeftRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding5"
+            android:paddingTop="@dimen/padding5"
+            android:text="@string/provide_gst_reg"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_17" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/billingNameTIL"
+            style="@style/margin10LeftRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/billing_name"
+            android:theme="@style/MyTextInputLayoutGrey">
+
+            <EditText
+                android:id="@+id/billingNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/text_dark"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:textColor="@color/text_dark" />
+        </android.support.design.widget.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/gstRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/gstRB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter GSTIN Number">
+
+            </RadioButton>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/gstTIL"
+                style="@style/margin10LeftRight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/gstn_caps"
+                android:theme="@style/MyTextInputLayoutGrey">
+
+                <EditText
+                    android:id="@+id/gstET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/text_dark"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="15"
+                    android:textColor="@color/text_dark" />
+            </android.support.design.widget.TextInputLayout>
+
+            <RadioButton
+                android:id="@+id/noGstRB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No GSTIN Number">
+
+            </RadioButton>
+
+            <TextView
+                android:id="@+id/gstMsgTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin25"
+                android:text="@string/gst_message" />
+
+            <CheckBox
+                android:id="@+id/gstCB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin10"
+                android:text="I agree all terms and conditon "
+                android:visibility="gone" />
+
+
+        </RadioGroup>
+
+
+        <Button
+            android:id="@+id/submitBT"
+            style="@style/styleSubmitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
+            android:gravity="center"
+            android:text="@string/submit" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

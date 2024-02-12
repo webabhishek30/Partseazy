@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/navHeaderHeight"
+    android:background="@drawable/navigation_background_gradient">
+
+
+    <TextView
+        android:id="@+id/headingNameTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:padding="@dimen/padding5"
+        android:layout_marginLeft="@dimen/margin15"
+        android:textSize="@dimen/text_24" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/margin30"
+        android:layout_below="@+id/headingNameTV"
+        android:orientation="horizontal">
+        <!--<CircularImageView-->
+        <!--android:id="@+id/circleView"-->
+        <!--android:layout_width="@dimen/width80"-->
+        <!--android:layout_height="@dimen/height80"-->
+        <!--android:src="@drawable/user_icon_white" />-->
+        <ImageView
+            android:id="@+id/circleView"
+            android:layout_width="@dimen/width50"
+            android:layout_height="@dimen/height50"
+            android:src="@drawable/user_icon_white" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin20">
+
+
+            <TextView
+                android:id="@+id/headingMobileTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_17" />
+            <TextView
+                android:id="@+id/creditTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/credit_available_str"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_12"
+                android:layout_below="@+id/headingMobileTV"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

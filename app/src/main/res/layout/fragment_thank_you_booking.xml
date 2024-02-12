@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dull_white">
+
+    <LinearLayout
+        android:id="@+id/toolbarLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <include layout="@layout/toolbar" />
+    </LinearLayout>
+
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarLL">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical">
+
+            <include layout="@layout/row_booking_deal_progressbar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10"
+                android:background="@drawable/rectangle_grey_border_white_solid"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:src="@drawable/check_green_circle" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:gravity="center_horizontal"
+                    android:text="@string/success"
+                    android:textSize="@dimen/text_20" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin5"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:gravity="center_horizontal"
+                    android:text="@string/your_booking_created" />
+
+
+                <TextView
+                    android:id="@+id/bookingIdTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:text="@string/booking_id"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_17" />
+
+                <TextView
+                    android:id="@+id/bookingDetailTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin5"
+                    android:padding="@dimen/padding10"
+                    android:text="@string/view_booking_detail"
+                    android:textColor="@color/green_checkout"
+                    android:textSize="@dimen/text_17" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:visibility="gone">
+
+                <include layout="@layout/row_buy_deal_item" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/margin10LeftRight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
+                android:text="@string/payment_methods"
+
+                android:textSize="@dimen/text_18" />
+
+            <LinearLayout
+                style="@style/margin10LeftRight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/rectangle_grey_border_white_solid"
+                android:orientation="vertical"
+                android:padding="@dimen/padding10">
+
+                <TextView
+                    android:id="@+id/paymentAmtTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/payment_due"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_15" />
+
+                <RadioGroup
+                    android:id="@+id/paymentRG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10">
+
+                    <RadioButton
+                        android:id="@+id/cashRB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pay_in_cash"
+                        android:textSize="@dimen/text_15" />
+
+                    <RadioButton
+                        android:id="@+id/directRB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settle_with_supplier"
+                        android:textSize="@dimen/text_15" />
+
+                    <RadioButton
+                        android:id="@+id/prepaidRB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Prepaid Payment"
+                        android:textSize="@dimen/text_15" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/prepaidRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+
+
+                </RadioGroup>
+
+
+
+
+                <Button
+                    android:id="@+id/continueBT"
+                    style="@style/styleSubmitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin20"
+                    android:enabled="false"
+                    android:text="@string/submit"
+                    android:textAllCaps="true" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

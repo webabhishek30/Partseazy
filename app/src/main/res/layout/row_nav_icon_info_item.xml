@@ -1,0 +1,116 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/card_margin"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/creditFacilityRL"
+        style="@style/margin10LeftRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding10">
+
+
+        <TextView
+            android:id="@+id/creditFacilityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:text="@string/credit_facility"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_17" />
+
+        <ImageView
+            android:id="@+id/creditFacilityIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/credit_facility_icon" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/myOrdersRL"
+        style="@style/margin10LeftRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding10">
+
+
+        <TextView
+            android:id="@+id/myOrdersTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:text="@string/my_order_bookings"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_17" />
+
+        <ImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/myOrdersIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/my_order_icon" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/myChatsRL"
+        style="@style/margin10LeftRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding10">
+
+
+        <TextView
+            android:id="@+id/myChatsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:text="@string/my_chats"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_17" />
+
+        <TextView
+            android:id="@+id/chatCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin10"
+            android:layout_toEndOf="@id/myChatsTV"
+            android:background="@drawable/green_circle_filled_small"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_17"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/myChatsIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/my_chats" />
+
+    </RelativeLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+
+</LinearLayout>
+

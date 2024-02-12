@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/dull_white"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:id="@+id/productIconIV"
+                    android:layout_width="@dimen/width100"
+                    android:layout_height="@dimen/height100"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/cart_dummy_item" />
+
+                <TextView
+                    android:id="@+id/productNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:layout_weight="1.8"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:padding="@dimen/padding10"
+                    android:text="WholeSale Free Sample 4G Ulefone Vienna Android Phone 3250mHa 5.5 inch display 4GB RAM,13 megapixel Camera" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/messageET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="top"
+                android:hint="@string/supplier_query"
+                android:minHeight="@dimen/defaultContactSupplierETHeigh"
+                android:padding="@dimen/padding10"
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray"
+                android:paddingTop="@dimen/padding30" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10">
+
+                <RelativeLayout
+                    android:id="@+id/imageRL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/selectedIMageIV"
+                        android:layout_width="@dimen/width100"
+                        android:layout_height="@dimen/height100" />
+
+                    <ImageView
+                        android:id="@+id/crossIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/selectedIMageIV"
+                        android:src="@drawable/ic_cross" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/attachImageIV"
+                    android:layout_width="@dimen/width100"
+                    android:layout_height="@dimen/width100"
+                    android:layout_marginLeft="@dimen/margin5"
+                    android:background="@drawable/dash_line_border"
+                    android:src="@drawable/ic_add_black_36dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin20"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I agree to share my contact information in my Buyer Profile with the supplier" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/padding10"
+                    android:text="Recommend Other Supplier if this supplier doesn't contact me with 24 hours" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

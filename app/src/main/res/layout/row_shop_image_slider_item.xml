@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/productLL"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/productIconIV"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/shop_card_image_size"
+        android:layout_marginLeft="@dimen/margin2"
+        android:layout_marginRight="@dimen/margin2"/>
+
+</RelativeLayout>
+
+

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin10"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/searchLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/searchET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/tag_background_unselected"
+                android:hint="@string/search_by_number"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:padding="@dimen/padding10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray" />
+
+            <TextView
+                android:id="@+id/searchTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/tag_background_selected"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/padding10"
+                android:text="Search"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_17" />
+        </LinearLayout>
+
+        <include layout="@layout/progress_loader" />
+
+        <LinearLayout
+            android:id="@+id/userDetailLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/rectangle_grey_border_white_solid"
+            android:orientation="vertical"
+            android:padding="@dimen/padding10"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/nameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding5"
+                android:text="Kumar"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/shopNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding5" />
+
+            <TextView
+                android:id="@+id/pincodeLockTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding5" />
+
+            <TextView
+                android:id="@+id/mobileTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding5" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/disassociateBTN"
+            style="@style/margin10LeftRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
+            android:background="@color/colorPrimary"
+            android:text="@string/disassociate_retailer"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/associateBTN"
+            style="@style/margin10LeftRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
+            android:background="@color/green_checkout"
+            android:text="@string/associate_retailer"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</LinearLayout>

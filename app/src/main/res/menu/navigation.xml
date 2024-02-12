@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_parts"
+        android:icon="@drawable/ic_launcher"
+        android:title="Parts" />
+
+    <item
+        android:id="@+id/nav_lubes"
+        android:icon="@drawable/ic_launcher"
+        android:title="Lubes" />
+
+    <item
+        android:id="@+id/nav_myorder"
+        android:icon="@drawable/ic_launcher"
+        android:title="My Order" />
+    <item
+        android:id="@+id/nav_loyalty"
+        android:icon="@drawable/ic_launcher"
+        android:title="Loyalty" />
+
+    <item
+        android:id="@+id/nav_contact"
+        android:icon="@drawable/ic_launcher"
+        android:title="@string/Contact" />
+
+</menu>

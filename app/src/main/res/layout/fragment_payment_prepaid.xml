@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin10"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/discountPriceTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_14"
+        android:layout_margin="@dimen/margin5"/>
+
+    <TextView android:id="@+id/paymentsTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin5"
+        android:textSize="@dimen/text_14"/>
+    
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/payment_optionRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin5">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <Button android:id="@+id/place_orderTV"
+        android:layout_width="match_parent"
+        style="@style/styleCheckoutButton"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="@dimen/margin10"
+        android:layout_marginLeft="@dimen/margin30"
+        android:layout_marginRight="@dimen/margin30"
+        android:text="@string/place_order"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_16"/>
+
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/card_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_10_opacity">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin100"
+            android:foreground="?android:attr/selectableItemBackground"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="0dp"
+            card_view:cardUseCompatPadding="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin30"
+                android:orientation="vertical"
+                android:padding="@dimen/padding10">
+                <TextView
+                    android:id="@+id/nameTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Naveen Kumar"
+                    android:textSize="@dimen/text_20"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"/>
+
+
+                <TextView
+                    android:id="@+id/mobileTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="+91-7814757763"
+                    android:textSize="@dimen/text_16"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/emailTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="abcdabcd@gmail.com"
+                    android:textSize="@dimen/text_16"
+                    android:gravity="center_horizontal" />
+                <TextView
+                    android:id="@+id/shopNameTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Naveen Telecommunication "
+                    android:textSize="@dimen/text_18"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"/>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin35"
+            android:layout_centerHorizontal="true">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/userImageView"
+                android:layout_width="@dimen/width100"
+                android:layout_height="@dimen/height100"
+                android:layout_weight="0.3" />
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+</RelativeLayout>

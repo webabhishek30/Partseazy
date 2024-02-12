@@ -1,0 +1,31 @@
+<LinearLayout android:background="@color/colorPrimary"
+    android:id="@+id/itemLYT"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/checkMarkIV"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin5"
+        android:layout_weight="0.1"
+        android:layout_width="0dp"
+        android:padding="@dimen/padding2"
+        android:src="@drawable/icon_check_mark"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/categoryNameTV"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.9"
+        android:layout_width="0dp"
+        android:padding="@dimen/padding5"
+        android:text="@string/action_fav_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_15" />
+</LinearLayout>
+

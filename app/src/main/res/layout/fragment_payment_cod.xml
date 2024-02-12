@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin10">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/codRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical"
+            android:gravity="right"
+            android:id="@+id/linearLayout">
+
+            <TextView android:id="@+id/prepaid_amountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:text="@string/rs"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/total_amountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:text="@string/rs"
+                android:textSize="@dimen/text_15"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout3">
+
+
+
+            <TextView
+                android:id="@+id/codChargeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:text="@string/cod_handling_charges"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/text_dark"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:layout_marginLeft="@dimen/margin5"
+                android:text="@string/final_amount"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/text_dark" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/small_amount_paymentBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/margin30"
+            android:layout_marginLeft="@dimen/margin30"
+            android:layout_marginRight="@dimen/margin30"
+            android:layout_marginBottom="@dimen/margin15"
+            android:background="@color/green_checkout"
+            android:text="@string/place_order"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16"
+
+            />
+
+        <TextView
+            android:id="@+id/discount_msg_prepaidTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/small_amount_paymentBtn"
+            android:textSize="@dimen/text_14"
+            android:text="@string/discount_msg_prepaidTV"
+            android:layout_marginLeft="@dimen/margin20"
+            android:layout_marginRight="@dimen/padding20"
+            android:gravity="center"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/upfront_paymentRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <RelativeLayout android:id="@+id/paymentRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_yellow_border"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10">
+
+            <TextView
+                android:id="@+id/cod_msgTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/margin10"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/text_dark"
+                android:drawableLeft="@drawable/alert_red"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/paymentRL"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginLeft="@dimen/margin5"
+            android:id="@+id/linearLayout2">
+
+            <TextView android:id="@+id/prepaid_discountTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/prepaid_charges"
+                android:textSize="@dimen/text_15"
+                android:textColor="@color/black"/>
+
+            <TextView android:id="@+id/cod_balance_discountTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:text="@string/cod_balance"
+                android:textSize="@dimen/text_15"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/linearLayout2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/margin5"
+            android:orientation="vertical"
+            android:gravity="right"
+            android:id="@+id/linearLayout1">
+
+            <TextView android:id="@+id/prepaid_paymentTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rs"
+                android:textSize="@dimen/text_15"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView android:id="@+id/cod_balanceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:text="@string/rs"
+                android:textSize="@dimen/text_15"
+                android:textColor="@color/colorPrimary"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/chosse_optionTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_marginTop="@dimen/margin10"
+            android:gravity="center"
+            android:text="@string/cod_paymnet_msg"
+            android:textSize="@dimen/text_15"
+            android:textColor="@color/text_normal"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/payment_optionRV"
+            android:layout_below="@+id/chosse_optionTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_marginLeft="@dimen/margin5"
+            android:layout_marginRight="@dimen/margin5"
+            />
+        <Button android:id="@+id/place_orderBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/payment_optionRV"
+            style="@style/styleCheckoutButton"
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_marginLeft="@dimen/margin30"
+            android:layout_marginRight="@dimen/margin30"
+            android:text="@string/place_order"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16"
+            android:visibility="visible"/>
+        </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin5"
+        android:background="@color/colorPrimary">
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin5"
+        android:background="@drawable/tag_background_unselected">
+
+
+        <EditText
+            android:id="@+id/searchET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.3"
+            android:background="@android:color/transparent"
+            android:hint="@string/search_by_parts_brand_word"
+            android:visibility="visible"
+            android:layout_marginLeft="8dp"
+            android:singleLine="true"
+            android:padding="@dimen/padding8"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/margin15" />
+
+        <LinearLayout
+            android:id="@+id/searchIconLL"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/crossIV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:padding="@dimen/padding5"
+                android:src="@drawable/ic_cross" />
+
+            <TextView
+                android:id="@+id/goTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin5"
+                android:background="@drawable/tag_background_selected"
+                android:gravity="center"
+                android:padding="@dimen/padding5"
+                android:text="GO" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

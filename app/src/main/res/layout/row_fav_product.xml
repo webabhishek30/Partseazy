@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin5"
+    android:layout_marginLeft="@dimen/margin5"
+    android:layout_marginRight="@dimen/margin5"
+    android:layout_marginTop="@dimen/margin5"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin10"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/ivProductImage"
+                android:layout_width="@dimen/cart_item_image"
+                android:layout_height="@dimen/cart_item_image"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:padding="2dp"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/refurbishIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/refurb"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/remove_favCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/padding5"
+                android:src="@drawable/fav_selector"
+                android:clickable="true" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/pname_favTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14" />
+
+        <TextView
+            android:id="@+id/moq_favTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_12" />
+
+        <TextView
+            android:id="@+id/price_favTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_12" />
+
+        <TextView
+            android:id="@+id/marginTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discount: 10%"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/red"
+            android:padding="2dp"
+            android:textSize="@dimen/text_14" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

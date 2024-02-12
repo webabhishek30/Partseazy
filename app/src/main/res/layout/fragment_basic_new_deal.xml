@@ -1,0 +1,366 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dull_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/toolbarLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <include layout="@layout/toolbar" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/continueBT"
+        style="@style/styleSubmitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:text="@string/save_continue"
+        android:textAllCaps="true" />
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbarLL"
+        android:layout_marginBottom="@dimen/margin30"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical">
+
+            <include layout="@layout/row_create_deal_progressbar" />
+
+            <LinearLayout
+                style="@style/margin8LeftRight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin30"
+                android:layout_marginTop="@dimen/margin5"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/padding20"
+                android:paddingLeft="@dimen/padding15"
+                android:paddingRight="@dimen/padding15"
+                android:paddingTop="@dimen/padding20">
+
+                <RelativeLayout
+                    style="@style/margin8LeftRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/switch_to_public_deal"
+                        android:textSize="@dimen/text_14" />
+
+                    <Switch
+                        android:id="@+id/publicSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/margin10" />
+                </RelativeLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/productNameTIL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_deal_product_name"
+                    android:theme="@style/DealTextInputLayoutGrey">
+
+                    <EditText
+                        android:id="@+id/productNameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/textGray"
+                        android:inputType="text"
+                        android:textColor="@color/text_dark" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/catSpinnerLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/categorySpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:padding="@dimen/padding5"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/subCatSpinnerLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:background="@drawable/border"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/subCatSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:padding="@dimen/padding5"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/productDescET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:background="@drawable/border"
+                    android:gravity="top"
+                    android:hint="@string/product_description"
+                    android:maxLength="512"
+                    android:minHeight="@dimen/height100"
+                    android:padding="@dimen/padding5"
+                    android:textColor="@color/text_dark"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/termsConditionET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:background="@drawable/border"
+                    android:gravity="top"
+                    android:hint="@string/terms_and_condition"
+                    android:maxLength="256"
+                    android:minHeight="@dimen/height100"
+                    android:padding="@dimen/padding5"
+                    android:textColor="@color/text_dark"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:text="@string/attach_photos"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_16" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/picRecylerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin15"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/retailer_options"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_16" />
+
+                    <CheckBox
+                        android:id="@+id/allowBookingCB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin2"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:text="@string/allow_retailer_booking_text"
+                        android:textSize="@dimen/text_16" />
+
+                    <CheckBox
+                        android:id="@+id/allowDemoCB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin2"
+                        android:text="@string/allow_retailer_demo_text"
+                        android:textSize="@dimen/text_16" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:text="@string/start_date"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_11"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/startDealLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:id="@+id/startDateRL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4">
+
+                        <TextView
+                            android:id="@+id/startDateTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="Select Date"
+                            android:textColor="@color/textGray"
+                            android:textSize="@dimen/text_14" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_calender" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.9dp"
+                            android:layout_below="@id/startDateTV"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/textGray" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/startTimeRL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin35"
+                        android:layout_weight="0.25">
+
+                        <TextView
+                            android:id="@+id/startTimeTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="00:00:00"
+                            android:textColor="@color/textGray"
+                            android:textSize="@dimen/text_14" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.9dp"
+                            android:layout_below="@id/startTimeTV"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/textGray" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin15"
+                    android:text="@string/end_deal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_16" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:text="@string/end_date"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_11"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/endDealLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:id="@+id/endDateRL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4">
+
+                        <TextView
+                            android:id="@+id/endDateTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="Select Date"
+                            android:textColor="@color/textGray"
+                            android:textSize="@dimen/text_14" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_calender" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.9dp"
+                            android:layout_below="@id/endDateTV"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/textGray" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/endTimeRL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin35"
+                        android:layout_weight="0.25">
+
+                        <TextView
+                            android:id="@+id/endTimeTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="11:59 AM"
+                            android:textColor="@color/textGray"
+                            android:textSize="@dimen/text_14" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.9dp"
+                            android:layout_below="@id/endTimeTV"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/textGray" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

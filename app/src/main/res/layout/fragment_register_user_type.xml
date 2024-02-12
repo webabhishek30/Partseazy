@@ -1,0 +1,294 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:background="?android:windowBackground"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <android.support.v7.widget.Toolbar
+            xmlns:compat="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            compat:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            compat:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginBottom="80dp"
+        app:layout_collapseMode="pin">
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/thanks_verify_phone"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="@dimen/text_12" />-->
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/retailerCV"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginEnd="@dimen/margin16"
+            android:layout_marginLeft="@dimen/margin16"
+            android:layout_marginRight="@dimen/margin16"
+            android:layout_marginStart="@dimen/margin16"
+            android:layout_marginBottom="@dimen/margin30"
+            android:elevation="@dimen/cardview_default_elevation">
+
+            <RelativeLayout
+                android:id="@+id/retailerRL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/retailerTypeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/retailerIV"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginLeft="@dimen/margin15"
+                    android:layout_toLeftOf="@+id/retailerCheckBox"
+                    android:text="@string/i_am_a_retailer"
+                    android:textSize="@dimen/text_18"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/retailerIV"
+                    android:layout_width="@dimen/width50"
+                    android:layout_height="@dimen/height50"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:src="@drawable/retailer"
+                    android:tint="@color/colorPrimary"
+                    android:visibility="visible" />
+                <CheckBox
+                    android:id="@+id/retailerCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:clickable="false"
+                    android:buttonTint="@color/colorPrimary"/>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/distributorCV"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginEnd="@dimen/margin16"
+            android:layout_marginLeft="@dimen/margin16"
+            android:layout_marginRight="@dimen/margin16"
+            android:layout_marginStart="@dimen/margin16"
+            android:layout_marginBottom="@dimen/margin30"
+            android:elevation="@dimen/cardview_default_elevation">
+
+            <RelativeLayout
+                android:id="@+id/distributorRL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/distributorTypeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginLeft="@dimen/margin15"
+                    android:layout_toLeftOf="@+id/distributorCheckBox"
+                    android:layout_toRightOf="@+id/distributorIV"
+                    android:text="@string/i_am_a_distributor"
+                    android:textSize="@dimen/text_18"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/distributorIV"
+                    android:layout_width="@dimen/width50"
+                    android:layout_height="@dimen/height50"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:src="@drawable/distributor"
+                    android:tint="@color/colorPrimary"
+                    android:visibility="visible" />
+
+                <CheckBox
+                    android:id="@+id/distributorCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:clickable="false"
+                    android:buttonTint="@color/colorPrimary"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/wholesellerCV"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginEnd="@dimen/margin16"
+            android:layout_marginLeft="@dimen/margin16"
+            android:layout_marginRight="@dimen/margin16"
+            android:layout_marginStart="@dimen/margin16"
+            android:layout_marginBottom="@dimen/margin30"
+            android:elevation="@dimen/cardview_default_elevation">
+
+            <RelativeLayout
+                android:id="@+id/wholesellerRL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/wholesellerTypeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginLeft="@dimen/margin15"
+                    android:layout_toLeftOf="@+id/wholesellerCheckBox"
+                    android:layout_toRightOf="@+id/wholesellerIV"
+                    android:text="@string/i_am_a_wholesaler"
+                    android:textSize="@dimen/text_18"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/wholesellerIV"
+                    android:layout_width="@dimen/width50"
+                    android:layout_height="@dimen/height50"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:src="@drawable/wholesaler"
+                    android:tint="@color/colorPrimary"
+                    android:visibility="visible" />
+                <CheckBox
+                    android:id="@+id/wholesellerCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:clickable="false"
+                    android:buttonTint="@color/colorPrimary"/>
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/firmCV"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginEnd="@dimen/margin16"
+            android:layout_marginLeft="@dimen/margin16"
+            android:layout_marginRight="@dimen/margin16"
+            android:layout_marginStart="@dimen/margin16"
+            android:layout_marginBottom="@dimen/margin30"
+            android:elevation="@dimen/cardview_default_elevation">
+
+            <RelativeLayout
+                android:id="@+id/firmRL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/firmTypeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginLeft="@dimen/margin15"
+                    android:layout_toLeftOf="@+id/firmCheckBox"
+                    android:layout_toRightOf="@+id/firmIV"
+                    android:text="@string/i_am_a_firm"
+                    android:textSize="@dimen/text_18"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/firmIV"
+                    android:layout_width="@dimen/width50"
+                    android:layout_height="@dimen/height50"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:src="@drawable/firm"
+                    android:tint="@color/colorPrimary"
+                    android:visibility="visible" />
+                <CheckBox
+                    android:id="@+id/firmCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:clickable="false"
+                    android:buttonTint="@color/colorPrimary"/>
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/continueRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/white_90_opacity"
+        android:visibility="visible">
+        <Button
+            android:id="@+id/continueBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin16"
+            android:background="@drawable/cart_continue_button_selector"
+            android:enabled="false"
+            android:layout_gravity="center"
+            android:textAllCaps="true"
+            android:padding="@dimen/padding10"
+            android:text="@string/continue_btn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_17" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

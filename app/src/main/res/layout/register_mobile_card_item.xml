@@ -1,0 +1,299 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome_bg">
+
+    <ImageView
+        android:id="@+id/imgVBackFromOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_arrow"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/b2c2Logo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/brandBannerHeight"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margin50"
+        android:scaleType="fitXY"
+        android:src="@drawable/partseazy_welcome_logo" />
+
+
+    <RelativeLayout
+        android:id="@+id/mobileRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/b2c2Logo"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/registerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin10"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/padding5"
+            android:text="@string/welcome_partseazy"
+            android:textAllCaps="true"
+            android:textColor="@color/textWhite"
+            android:textSize="@dimen/text_20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/registerMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/registerTitle"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="@string/welcome_partseazy_message"
+            android:textColor="@color/textWhite" />
+
+
+        <EditText
+            android:id="@+id/mobileET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/registerMessage"
+            android:layout_marginLeft="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin75"
+            android:layout_marginRight="@dimen/margin30"
+            android:background="@drawable/round_shape_btn"
+            android:gravity="center_vertical"
+            android:hint="@string/enter_mobile"
+            android:inputType="number"
+            android:maxLength="10"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/black_editbox_cursor" />
+
+        <Button
+            android:id="@+id/continue_register_mobileBT"
+            style="@style/styleSubmitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mobileET"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/margin100"
+            android:layout_marginTop="@dimen/margin30"
+            android:layout_marginRight="@dimen/margin100"
+            android:background="@drawable/round_shape_red_btn"
+            android:gravity="center"
+            android:padding="@dimen/margin5"
+            android:text="@string/continue_caps"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/otpRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/b2c2Logo"
+        android:layout_marginTop="@dimen/margin20"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/crossIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding5"
+            android:src="@drawable/ic_cross" />
+
+        <TextView
+            android:id="@+id/verificationTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/verification_code"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/opt_textTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/verificationTV"
+            android:layout_marginTop="@dimen/margin5"
+            android:gravity="center_horizontal"
+            android:text="@string/otp_text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/opt_mobileTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/opt_textTV"
+            android:gravity="center"
+            android:text="@string/mobile_number"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+
+        <EditText
+            android:id="@+id/otpET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/opt_mobileTV"
+            android:layout_marginLeft="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin20"
+            android:layout_marginRight="@dimen/margin30"
+            android:background="@drawable/round_shape_btn"
+            android:gravity="center_vertical"
+            android:hint="@string/enter_otp"
+            android:inputType="number"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/black_editbox_cursor" />
+
+        <View
+            android:layout_width="@dimen/width100"
+            android:layout_height="0.6dp"
+            android:layout_below="@+id/otpET"
+            android:layout_marginTop="@dimen/margin5"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/resendRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/otpET"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/timeTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
+                android:gravity="center_horizontal"
+                android:text="@string/otp_not_recieved"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/resend_otpTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/padding5"
+                android:text="@string/resend_otp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <CheckBox
+            android:id="@+id/chkTermAndCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resendRL"
+            android:layout_marginTop="@dimen/margin30"
+            android:buttonTint="@color/white"
+            android:layout_toLeftOf="@+id/llTermCondition"
+            android:checked="true" />
+        <LinearLayout
+            android:id="@+id/llTermCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resendRL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin30"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding5">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/txtTermConditionClicktxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="@string/terms_and_condition_home_txt"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_16"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                >
+                <TextView
+                    android:id="@+id/txtTermConditionClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="@string/terms_of_use"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_16"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtPrivacyPolicyClicktxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text=" and "
+                    android:layout_toRightOf="@+id/txtTermConditionClick"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_16"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtPrivacyPolicyClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_toRightOf="@+id/txtPrivacyPolicyClicktxt"
+                    android:text="@string/privacy_policy_underline"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_16"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/submitOTPBT"
+            style="@style/styleSubmitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/margin100"
+            android:layout_marginTop="@dimen/margin20"
+            android:layout_marginRight="@dimen/margin100"
+            android:background="@drawable/round_shape_red_btn"
+            android:enabled="false"
+            android:layout_below="@id/llTermCondition"
+            android:gravity="center"
+            android:padding="@dimen/margin5"
+            android:text="@string/continue_caps"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <WebView
+        android:id="@+id/epayWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/basic_info_card_credit_facility" />
+
+            <include layout="@layout/residence_add_card_credit_facility" />
+
+            <include layout="@layout/business_info_card_credit_facility" />
+
+            <include layout="@layout/business_add_card_credit_facility" />
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/selectTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding5"
+                        android:textColor="@color/green_success"
+                        android:text="@string/select_documents_to_submit"
+                        android:textSize="@dimen/text_15" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/scrollable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/selectTV"
+                        android:background="@color/white"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <ProgressBar
+                android:id="@+id/b2c2_progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/userActionLL"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/userActionLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/scrollable"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding10">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/desired_credit_limit"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_16" />
+
+                    <com.partseazy.android.ui.widget.SeekbarWithIntervals
+                        android:id="@+id/seekbarWithIntervals"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/margin20">
+
+                    </com.partseazy.android.ui.widget.SeekbarWithIntervals>
+
+
+                    <CheckBox
+                        android:id="@+id/checkBoxBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin20"
+                        android:checked="true"
+                        android:text="@string/partseazy_credit_limit_check_text" />
+
+
+                    <Button
+                        android:id="@+id/continueBTN"
+                        style="@style/styleCheckoutButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin5"
+                        android:layout_marginTop="@dimen/margin20"
+                        android:text="@string/complete"
+                        android:textAllCaps="true" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

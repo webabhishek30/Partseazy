@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_background"
+    android:layout_margin="@dimen/margin5">
+
+    <TextView
+        android:id="@+id/optionTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_15"
+        android:layout_weight="1"
+        android:text="HOME"
+        />
+
+    <RadioButton
+        android:id="@+id/delivery_optionRB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin10"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

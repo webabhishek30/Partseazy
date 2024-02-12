@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cart"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin10"
+    android:layout_marginRight="@dimen/margin10"
+    android:layout_marginTop="@dimen/margin10">
+
+    <RelativeLayout
+        android:id="@+id/cartRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/cartleftRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="@dimen/margin10">
+
+
+            <FrameLayout
+                android:id="@+id/product_image_fl"
+                android:layout_width="@dimen/cart_item_image"
+                android:layout_height="@dimen/cart_item_image">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/product_cartIV"
+                    android:layout_width="@dimen/cart_item_image"
+                    android:layout_height="@dimen/cart_item_image"
+                    android:padding="2dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/cart_dummy_item" />
+
+                <include layout="@layout/view_out_of_stock" />
+            </FrameLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/product_info_cartRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignTop="@+id/product_image_fl"
+                android:layout_marginLeft="@dimen/margin5"
+                android:layout_toRightOf="@+id/product_image_fl"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/productInfoLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+
+                    <TextView
+                        android:id="@+id/product_name_cartTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:maxLines="2"
+                        android:text="Panasonic Smart Power Alpha 90dp mAh Power Bank"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/black" />
+
+                    <RelativeLayout
+                        android:id="@+id/priceRL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin5">
+
+                        <TextView
+                            android:id="@+id/discountPriceTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:singleLine="true"
+                            android:text="@string/rs"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_medium"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/maxPriceTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/discountPriceTv"
+                            android:layout_marginLeft="@dimen/margin5"
+                            android:singleLine="true"
+                            android:text="@string/max_price"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/text_12" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/product_minqty_cartTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productInfoLL"
+                    android:layout_marginTop="1dp"
+                    android:text="MOQ : 5 Piece"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/text_14" />
+
+                <TextView
+                    android:id="@+id/product_marginTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_minqty_cartTV"
+                    android:layout_marginTop="1dp"
+                    android:text="Discount : 10%"
+                    android:textStyle="bold"
+                    android:textColor="@color/green_success"
+                    android:textSize="@dimen/text_14" />
+
+
+                <RelativeLayout
+                    android:id="@+id/update_item_countRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_marginTV"
+                    android:layout_marginTop="@dimen/margin10">
+
+                    <View
+                        android:id="@+id/viewCart"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/view" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/viewCart">
+
+                        <TextView
+                            android:id="@+id/cartQtyTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin5"
+                            android:layout_marginTop="@dimen/margin5"
+                            android:layout_alignParentLeft="true"
+                            android:paddingTop="@dimen/padding5"
+                            android:text="@string/qty"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/black" />
+
+
+                        <LinearLayout
+                            android:id="@+id/qtyLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin5"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <ImageView
+                                android:id="@+id/btn_minus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/cart_decrease" />
+
+                            <com.partseazy.android.ui.widget.NumberPicketEditText
+                                android:id="@+id/et_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginBottom="7dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/border"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:text="100"
+                                android:singleLine="true"
+                                android:textSize="@dimen/notification_subtext_size" />
+
+                            <ImageView
+                                android:id="@+id/btn_plus"
+                                android:layout_width="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/cart_increase" />
+
+                            <TextView
+                                android:id="@+id/remove_product_cartTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@id/viewCart"
+                                android:layout_margin="@dimen/margin15"
+                                android:layout_marginTop="@dimen/padding_normal"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/padding30"
+                                android:text="X Remove"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_14"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cartleftRL">
+
+            <TextView
+                android:id="@+id/tv_error_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin5"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin5"
+                android:drawableLeft="@drawable/alert_red"
+                android:drawablePadding="@dimen/margin5"
+                android:visibility="gone"
+                android:padding="@dimen/padding_Small"
+                android:maxLines="2"
+                android:text="@string/out_of_stock_error_msg"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

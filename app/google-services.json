@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "556282310782",
+    "firebase_url": "https://parts-eazy.firebaseio.com",
+    "project_id": "parts-eazy",
+    "storage_bucket": "parts-eazy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556282310782:android:a1469e6160d71c0f",
+        "android_client_info": {
+          "package_name": "com.partseazy.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556282310782-mtf17psmckal7hh7tdedfgcsiu3c9eik.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.partseazy.android",
+            "certificate_hash": "51db80d1d89f603dfe64498100fcb0c3bb74dba5"
+          }
+        },
+        {
+          "client_id": "556282310782-p1j8l2v1iug9sltr3kdb04dle1rk28cn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.partseazy.android",
+            "certificate_hash": "6ac09d2bc6039f27f910416690580fc3bddc0198"
+          }
+        },
+        {
+          "client_id": "556282310782-g40v6bh1bb1su1tvjostm4ofs7ll0kjs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtz18lzaQf53ghCzy0HMQrXajClMrTU8A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "556282310782-g40v6bh1bb1su1tvjostm4ofs7ll0kjs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

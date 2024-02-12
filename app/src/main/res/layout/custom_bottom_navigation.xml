@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    android:layout_gravity="bottom"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/ftView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/padding5"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:id="@+id/homeLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="@dimen/radius35"
+                android:layout_height="@dimen/radius35"
+                android:paddingBottom="@dimen/padding5"
+                android:src="@drawable/nav_home_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="@dimen/margin5"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginRight="@dimen/margin10"
+                android:background="@color/colorPrimary"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/dealLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/radius35"
+                android:layout_height="@dimen/radius35"
+                android:src="@drawable/ic_deal_nav"
+                android:paddingBottom="@dimen/padding5"
+                android:tint="@color/gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/deals"
+                android:textColor="@color/gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chatLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/radius35"
+                android:layout_height="@dimen/radius35"
+                android:paddingBottom="@dimen/padding5"
+                android:src="@drawable/ic_chat_white_24dp"
+                android:tint="@color/gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chats"
+                android:textColor="@color/gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/callLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/radius35"
+                android:layout_height="@dimen/radius35"
+                android:paddingBottom="@dimen/padding5"
+                android:src="@drawable/icon_phone_green"
+                android:tint="@color/gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/call_us"
+                android:textColor="@color/gray" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

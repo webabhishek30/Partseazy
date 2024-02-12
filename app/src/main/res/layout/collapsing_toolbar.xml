@@ -1,0 +1,38 @@
+<android.support.design.widget.CollapsingToolbarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/collapsing_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:expandedTitleGravity="bottom"
+    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+    <RelativeLayout
+        android:id="@+id/collapseHeaderRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+
+        <TextView
+            android:id="@+id/topHeadingTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin30"
+            android:paddingTop="@dimen/padding_normal"
+            android:text="@string/tell_us"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_15" />
+        <!--</LinearLayout>-->
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|enterAlways"
+    app:layout_collapseMode="pin" />
+</android.support.design.widget.CollapsingToolbarLayout>

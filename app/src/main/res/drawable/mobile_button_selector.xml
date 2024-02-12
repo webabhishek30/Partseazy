@@ -1,0 +1,11 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/mobile_btn_focused_color" android:state_selected="true">
+
+    </item>
+    <item android:drawable="@color/mobile_btn_focused_color" android:state_pressed="true">
+
+    </item>
+    <item android:drawable="@color/mobile_btn_pressed_color">
+
+    </item>
+</selector>

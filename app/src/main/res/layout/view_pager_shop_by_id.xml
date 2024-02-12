@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Part No./Part Name*"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/et_search_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:hint="Enter Part Number"
+        android:maxLines="1"
+        android:lines="1"
+        android:textColor="@color/white"
+        android:textColorHint="@color/lightGray" />
+
+    <Button
+        android:id="@+id/btn_search_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/search_button_back"
+        android:padding="7dp"
+        android:text="Search"
+        android:textAllCaps="false"
+        android:textColor="#C2C1C1" />
+
+</LinearLayout>

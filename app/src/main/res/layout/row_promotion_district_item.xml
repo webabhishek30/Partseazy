@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/margin10LeftRight">
+
+    <LinearLayout
+        android:id="@+id/contentLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/arrowIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_drop_down_black_24dp"
+            android:rotation="270"
+            android:layout_gravity="center"/>
+
+        <CheckBox
+            android:id="@+id/mainAreaCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:text="EAST DELHI"
+            android:textSize="@dimen/text_16"/>
+        <TextView
+            android:id="@+id/subHeadingTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1233 Shops"
+            android:layout_marginLeft="@dimen/margin10"
+            android:textColor="@color/colorPrimarySecondaryText"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/areaRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

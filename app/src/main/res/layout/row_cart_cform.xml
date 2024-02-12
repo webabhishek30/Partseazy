@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shippingSummmry_cartCD"
+    style="@style/margin10LeftRight"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/margin5"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/expand_cformRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/c_form_cartTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10"
+                android:gravity="center"
+                android:text="@string/form_c"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_15" />
+
+
+            <ImageView
+                android:id="@+id/expand_cformIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/margin10"
+                android:src="@drawable/ic_plus" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cform_RL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/expand_cformRL"
+            android:visibility="visible">
+
+            <CheckBox
+                android:id="@+id/cform_dataCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin10"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginRight="@dimen/margin10"
+                android:text="Click here If you have a valid CST registration, and wish to submit Form C to avail Tax Refund"
+                android:textColor="@color/text_dark" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar"
+        android:gravity="center_horizontal">
+        <include layout="@layout/row_shipping_progressbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rectangle_grey_border_white_solid"
+            android:gravity="center"
+            android:layout_margin="@dimen/margin10"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/check_green_circle"
+                android:layout_marginTop="@dimen/margin10"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/nameTV"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/thank_you_msg"
+                android:layout_marginTop="@dimen/margin10"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/orderNumber"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:textSize="@dimen/text_15"
+                android:textColor="@color/green_checkout"
+                android:textAllCaps="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginLeft="@dimen/margin15"
+                android:layout_marginRight="@dimen/margin15"
+                android:layout_marginBottom="@dimen/margin15"
+                android:gravity="center"
+                android:text="@string/confirmation_msg"
+                android:textSize="@dimen/text_12"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/goToMyOrdersTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:text="@string/go_to_order"
+            android:textSize="@dimen/text_15"
+            android:textColor="@color/green_checkout"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/continueBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin30"
+            android:background="@color/green_checkout"
+            android:text="@string/continue_shopping"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+</RelativeLayout>

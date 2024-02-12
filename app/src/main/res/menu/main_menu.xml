@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_home"
+        android:title="@string/action_home_title"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:title="@string/search"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_favourite"
+        android:icon="@drawable/ic_heart"
+        android:title="@string/action_fav_title"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/action_cart"
+        android:actionLayout="@layout/cart_update_icon"
+        android:icon="@drawable/cart_shape"
+        android:title="@string/cart"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_send"
+        android:actionLayout="@layout/cart_update_icon"
+        android:icon="@drawable/ic_send_white_24dp"
+        android:title="@string/cart"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_share_white_24dp"
+        android:title="@string/cart"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_fav"
+        android:title="@string/action_fav_title"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_order"
+        android:title="My Orders"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_customercare"
+        android:title="@string/txt_CustomerCare"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_filter"
+        android:actionLayout="@layout/deal_filter_custom_icon"
+        android:title="@string/search"
+        app:showAsAction="always" />
+
+
+</menu>

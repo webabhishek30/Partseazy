@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Material Prescription"
+            android:textSize="16dp"
+            android:layout_marginTop="@dimen/margin5"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/imgCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:tint="@color/white"
+            android:src="@drawable/ic_clear_black_24dp"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/gray"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnCamera"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@color/white"
+            android:text="Camera"
+            android:textAllCaps="false"
+            android:textSize="15dp"
+            android:layout_marginRight="5dp"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableLeft="@drawable/ic_photo_camera_black_24dp"
+            />
+
+        <Button
+            android:id="@+id/btnGallery"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gallery"
+            android:padding="5dp"
+            android:layout_marginLeft="6dp"
+            android:background="@color/white"
+            android:textAllCaps="false"
+            android:textSize="15dp"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableLeft="@drawable/ic_photo_black_24dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

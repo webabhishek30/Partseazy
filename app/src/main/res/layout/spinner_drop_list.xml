@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemLYT"
+    style="?android:attr/spinnerDropDownItemStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding15"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/spinnerIV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/margin5"
+        android:layout_weight="0.1"
+        android:src="@drawable/icon_check_mark"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@android:id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.9"
+        android:padding="@dimen/padding2"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_18" />
+
+
+</LinearLayout>

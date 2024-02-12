@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin20"
+    android:layout_marginRight="@dimen/margin30"
+    android:layout_marginLeft="@dimen/margin30"
+    android:layout_marginBottom="@dimen/productRecylerBottomMargin">
+    <RelativeLayout
+        android:id="@+id/callRL"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/price_range_green_round_border">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/callTV"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_phone_green"/>
+        <TextView
+            android:id="@+id/callTV"
+            android:text="@string/call_to_order"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/green_success"
+            android:padding="@dimen/padding15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/sampleOrderTV"
+        android:text="@string/order_sample_product"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding15"
+        android:textColor="@color/green_success"
+        android:textAllCaps="true"
+        android:background="@drawable/price_range_green_round_border"
+        android:layout_marginTop="@dimen/margin10"
+        android:visibility="gone"/>
+    <include
+        android:visibility="gone"
+        layout="@layout/row_payment_call"/>
+
+
+
+</LinearLayout>

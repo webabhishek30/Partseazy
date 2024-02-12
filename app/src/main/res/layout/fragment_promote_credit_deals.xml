@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <include layout="@layout/row_promote_deal_progressbar" />
+
+        <LinearLayout
+            android:id="@+id/contentLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin50"
+            android:background="@drawable/rectangle_grey_border_white_solid"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding10"
+            android:paddingTop="@dimen/padding10">
+
+            <ImageView
+                android:id="@+id/statusIV"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:src="@drawable/check_green_circle" />
+
+            <TextView
+                android:id="@+id/creditMsgTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/padding10"
+                android:layout_marginRight="@dimen/padding10"
+                android:text="@string/credit_successfull_msg"
+                android:textSize="@dimen/text_18" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin5"
+                android:layout_marginTop="@dimen/margin5"
+                android:gravity="center_horizontal"
+                android:text="@string/your_booking_created"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/confirmBT"
+                style="@style/styleCheckoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin20"
+                android:layout_marginLeft="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin20"
+                android:layout_marginTop="@dimen/margin30"
+                android:text="Confirm Promotion"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/callBT"
+                style="@style/styleCheckoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin20"
+                android:layout_marginLeft="@dimen/margin20"
+                android:layout_marginRight="@dimen/margin20"
+                android:layout_marginTop="@dimen/margin30"
+                android:text="Call us to buy credits"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/progress_loader" />
+
+
+</RelativeLayout>
